@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xwikidoc>
+<web>XPoll</web>
+<name>XPollService</name>
+<language></language>
+<defaultLanguage>en</defaultLanguage>
+<translation>0</translation>
+<parent></parent>
+<creator>XWiki.Admin</creator>
+<author>XWiki.Admin</author>
+<customClass></customClass>
+<contentAuthor>XWiki.Admin</contentAuthor>
+<creationDate>1325372400000</creationDate>
+<date>1325372400000</date>
+<contentUpdateDate>1325372400000</contentUpdateDate>
+<version>1.1</version>
+<title></title>
+<template></template>
+<defaultTemplate></defaultTemplate>
+<validationScript></validationScript>
+<comment></comment>
+<minorEdit>false</minorEdit>
+<syntaxId>xwiki/2.1</syntaxId>
+<hidden>true</hidden>
+<content>{{groovy}}
+try {
+if (!request.page) {
+ println "FAIL: no xpoll page provided"
+} else {
+
+def xpolldoc = xwiki.getDocument(request.page)
+synchronized (xpolldoc) {
+ xpolldoc.use("XPoll.XPollClass")
+ def status = xpolldoc.getValue("status")
+ def proposals = xpolldoc.getValue("proposals")
+ def votes = util.arrayList
+ for (proposal in proposals) {
+   if (request.get("${proposal.hashCode()}")) {
+     votes.add(proposal);
+   }
+ }
+ def voteobj = xpolldoc.getObject("XPoll.XPollVoteClass", "user", xcontext.user, false)
+ if (voteobj==null) {
+    voteobj = xpolldoc.newObject("XPoll.XPollVoteClass")
+ }
+ xpolldoc.use(voteobj)
+ xpolldoc.set("user", xcontext.user)
+ xpolldoc.set("votes", votes);
+ // find the new winners
+
+ def voteCount = util.hashMap;
+ for (proposal in proposals) {
+   voteCount.put(proposal, 0)
+ }
+ def maxvote = 0;
+ def currentWinners = util.arrayList;
+ for(obj in xpolldoc.getObjects("XPoll.XPollVoteClass")) {
+   xpolldoc.use(obj)
+   def currentvotes = xpolldoc.getValue("votes")
+   for (vote in currentvotes) {
+     def nbvotes = voteCount.get(vote);
+     nbvotes = nbvotes + 1;
+     voteCount.put(vote, nbvotes);
+     if (nbvotes==maxvote) {
+       currentWinners.add(vote); 
+     } else if (nbvotes&gt;maxvote) {
+       currentWinners = util.arrayList;
+       currentWinners.add(vote); 
+       maxvote = nbvotes;
+     }
+   }
+ }
+
+ // update current winner
+ xpolldoc.use("XPoll.XPollClass")
+ xpolldoc.set("winner", currentWinners.join(','))
+
+ // ready to save the vote results
+ xwiki.getXWiki().saveDocument(xpolldoc.document, "New vote", xcontext.context);
+ println "OK ${votes.size()} votes - Winner ${currentWinners.join(',')}"
+}
+}
+} catch (Throwable e) {
+ e.printStackTrace();
+ println """FAIL: exception ${e.message}"""
+}
+{{/groovy}}</content></xwikidoc>
