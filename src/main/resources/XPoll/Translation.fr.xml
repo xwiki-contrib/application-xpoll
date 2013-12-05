@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xwikidoc>
+<web>XPoll</web>
+<name>Translation</name>
+<language>fr</language>
+<defaultLanguage></defaultLanguage>
+<translation>1</translation>
+<parent></parent>
+<creator>XWiki.Admin</creator>
+<author>XWiki.Admin</author>
+<customClass></customClass>
+<contentAuthor>XWiki.Admin</contentAuthor>
+<creationDate>1386247558000</creationDate>
+<date>1386247558000</date>
+<contentUpdateDate>1386247558000</contentUpdateDate>
+<version>1.1</version>
+<title></title>
+<defaultTemplate></defaultTemplate>
+<validationScript></validationScript>
+<comment>Import</comment>
+<minorEdit>false</minorEdit>
+<syntaxId>xwiki/2.1</syntaxId>
+<hidden>true</hidden>
+<content>contrib.xpoll.app.title=XPoll (sondages)
+
+contrib.xpoll.status.active=Actif
+contrib.xpoll.status.inPreparation=En cours de préparation
+contrib.xpoll.status.finished=Terminé
+
+XPoll.XPollClass_status_inpreparation=En cours de préparation
+XPoll.XPollClass_status_active=Actif
+XPoll.XPollClass_status_finished=Terminé
+
+contrib.xpoll.WebHome.description=Bienvenue sur la page de l'application XPoll. Vous pouvez créer un sondage en fonction de vos besoins.
+contrib.xpoll.WebHome.name=Nom
+contrib.xpoll.WebHome.status=Statut
+contrib.xpoll.WebHome.winner=Vainqueur 
+
+xpoll.livetable.name=Nom
+xpoll.livetable.status=Statut
+xpoll.livetable.winner=Vainqueur 
+xpoll.livetable._actions=Actions
+
+contrib.xpoll.preparation.hasRight=Ce xpoll est actuellement en préparation, cliquez sur "editer" pour le modifier et l'activer.
+contrib.xpoll.preparation.noRight=Ce xpoll est actuellement en préparation, vous n'avez pas le droit de le modifier.
+
+contrib.xpoll.finish.message=Le vote est terminé. Voici les résultats:
+
+contrib.xpoll.numberVotes=Nombre de votes
+contrib.xpoll.user=Utilisateur
+contrib.xpoll.vote.user.submit=Sauver
+contrib.xpoll.vote.guest.submit=Sauver
+
+contrib.xpoll.name=Nom
+contrib.xpoll.description=Description
+contrib.xpoll.status=Statut
+contrib.xpoll.proposals=Propositions (liste d'éléments séparés par des virgules ou des barres verticales)</content></xwikidoc>

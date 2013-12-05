@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xwikidoc>
+<web>XPoll</web>
+<name>Translation</name>
+<language></language>
+<defaultLanguage></defaultLanguage>
+<translation>0</translation>
+<parent>Main.SpaceIndex</parent>
+<creator>XWiki.Admin</creator>
+<author>XWiki.Admin</author>
+<customClass></customClass>
+<contentAuthor>XWiki.Admin</contentAuthor>
+<creationDate>1386247559000</creationDate>
+<date>1386247874000</date>
+<contentUpdateDate>1386247874000</contentUpdateDate>
+<version>2.1</version>
+<title>Translation</title>
+<defaultTemplate></defaultTemplate>
+<validationScript></validationScript>
+<comment></comment>
+<minorEdit>false</minorEdit>
+<syntaxId>xwiki/2.1</syntaxId>
+<hidden>true</hidden>
+<object>
+<class>
+<name>XWiki.TranslationDocumentClass</name>
+<customClass></customClass>
+<customMapping></customMapping>
+<defaultViewSheet></defaultViewSheet>
+<defaultEditSheet></defaultEditSheet>
+<defaultWeb></defaultWeb>
+<nameField></nameField>
+<validationScript></validationScript>
+<scope>
+<cache>0</cache>
+<disabled>0</disabled>
+<displayType>select</displayType>
+<multiSelect>0</multiSelect>
+<name>scope</name>
+<number>1</number>
+<prettyName>Scope</prettyName>
+<relationalStorage>0</relationalStorage>
+<separator> </separator>
+<separators> ,|</separators>
+<size>1</size>
+<unmodifiable>0</unmodifiable>
+<values>GLOBAL|WIKI|USER|ON_DEMAND</values>
+<classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+</scope>
+</class>
+<name>XPoll.Translation</name>
+<number>0</number>
+<className>XWiki.TranslationDocumentClass</className>
+<guid>1baaaad9-2a5a-479e-9933-aa33639b01f7</guid>
+<property>
+<scope>WIKI</scope>
+</property>
+</object>
+<content>contrib.xpoll.app.title=XPoll
+
+contrib.xpoll.status.active=Active
+contrib.xpoll.status.inPreparation=In preparation
+contrib.xpoll.status.finished=Finished
+
+XPoll.XPollClass_status_inpreparation=In preparation
+XPoll.XPollClass_status_active=Active
+XPoll.XPollClass_status_finished=Finished
+
+contrib.xpoll.WebHome.description=Welcome to the XWiki Poll Application. You can create a poll for your internal needs.
+contrib.xpoll.WebHome.name=Name
+contrib.xpoll.WebHome.status=Status
+contrib.xpoll.WebHome.winner=Winner 
+
+xpoll.livetable.name=Name
+xpoll.livetable.status=Status
+xpoll.livetable.winner=Winner
+xpoll.livetable._actions=Actions
+
+contrib.xpoll.preparation.hasRight=This xpoll is currently in preparation, click "edit" to modify it and activate it.
+contrib.xpoll.preparation.noRight=This xpoll is currently in preparation, you do not have the rights to modify it.
+
+contrib.xpoll.finish.message=Vote is finished. Here are the results:
+
+contrib.xpoll.numberVotes=Number of votes
+contrib.xpoll.user=User
+
+contrib.xpoll.vote.guest.submit=Save
+contrib.xpoll.vote.user.submit=Save
+
+contrib.xpoll.name=Name
+contrib.xpoll.description=Description
+contrib.xpoll.status=Status
+contrib.xpoll.proposals=Proposals (comma or pipe separated list)</content></xwikidoc>
