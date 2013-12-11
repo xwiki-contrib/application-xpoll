@@ -34,12 +34,18 @@
   <description>XWiki Simple Poll Application - Doodle like</description>
   <developers>
     <developer>
+      <id>ldubost</id>
       <name>Ludovic Dubost</name>
     </developer>
     <developer>
-        <name>Andreea Popescu</name>
+      <id>PopescuAndreea</id>
+      <name>Andreea Popescu</name>
     </developer>
   </developers>
+  <organization>
+    <name>XWiki SAS</name>
+    <url>http://xwiki.com</url>
+  </organization>
   <scm>
    <connection>scm:git:git://github.com/xwiki-contrib/application-xpoll.git</connection>
    <developerConnection>scm:git:git@github.com:xwiki-contrib/application-xpoll.git</developerConnection>
