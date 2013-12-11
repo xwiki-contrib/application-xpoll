@@ -22,14 +22,78 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>org.xwiki.platform.applications</groupId>
-    <artifactId>xwiki-applications</artifactId>
-    <version>35</version>
+    <groupId>org.xwiki.commons</groupId>
+    <artifactId>xwiki-commons-pom</artifactId>
+    <version>5.2.1</version>
   </parent>
   <groupId>org.xwiki.contrib</groupId>
-  <artifactId>xwiki-application-xpoll-application</artifactId>
-  <version>VERSION</version>
+  <artifactId>application-xpoll</artifactId>
+  <version>1.2-SNAPSHOT</version>
   <packaging>xar</packaging>
-  <name>XWiki Application - XPoll Application</name>
+  <name>XPoll Application</name>
   <description>XWiki Simple Poll Application - Doodle like</description>
+  <developers>
+    <developer>
+      <name>Ludovic Dubost</name>
+    </developer>
+    <developer>
+        <name>Andreea Popescu</name>
+    </developer>
+  </developers>
+  <scm>
+   <connection>scm:git:git://github.com/xwiki-contrib/application-xpoll.git</connection>
+   <developerConnection>scm:git:git@github.com:xwiki-contrib/application-xpoll.git</developerConnection>
+   <url>https://github.com/xwiki-contrib/application-xpoll</url>
+ </scm>
+ <distributionManagement>
+   <repository>
+     <id>xwiki-staging</id>
+     <name>XWiki Staging Repository</name>
+     <url>http://nexus.xwiki.org/nexus/service/local/staging/deploy/maven2/</url>
+   </repository>
+ </distributionManagement>
+ <properties>
+    <!-- Don't run CLIRR here since there's no Java code. -->
+    <xwiki.clirr.skip>true</xwiki.clirr.skip>
+  </properties>
+  <dependencies>
+  <dependency>
+      <groupId>org.xwiki.platform</groupId>
+      <artifactId>xwiki-platform-livetable-ui</artifactId>
+      <version>${project.parent.version}</version>
+      <type>xar</type>
+      <scope>runtime</scope>
+    </dependency>
+      <dependency>
+      <groupId>org.xwiki.platform</groupId>
+      <artifactId>xwiki-platform-sheet-ui</artifactId>
+      <version>${project.parent.version}</version>
+      <type>xar</type>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.xwiki.platform</groupId>
+      <artifactId>xwiki-platform-uiextension-ui</artifactId>
+      <version>${project.parent.version}</version>
+      <type>xar</type>
+      <scope>runtime</scope>
+    </dependency>
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.xwiki.commons</groupId>
+        <artifactId>xwiki-commons-tool-xar-plugin</artifactId>
+        <version>${commons.version}</version>
+      </plugin>
+    </plugins>
+    <!-- Needed to add support for the XAR packaging -->
+    <extensions>
+      <extension>
+        <groupId>org.xwiki.commons</groupId>
+        <artifactId>xwiki-commons-tool-xar-handlers</artifactId>
+        <version>${commons.version}</version>
+      </extension>
+    </extensions>
+  </build>
 </project>
