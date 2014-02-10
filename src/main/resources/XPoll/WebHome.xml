@@ -15,7 +15,7 @@
   <date>1325372400000</date>
   <contentUpdateDate>1325372400000</contentUpdateDate>
   <version>1.1</version>
-  <title>$msg.get('platform.appwithinminutes.appHomePageTitle', $doc.space)</title>
+  <title>$services.localization.render("contrib.xpoll.app.hometitle")</title>
   <template/>
   <defaultTemplate/>
   <validationScript/>
@@ -86,7 +86,96 @@
       <columns>name status proposals _actions</columns>
     </property>
     <property>
-      <description>Welcome to the XWiki Poll Application. You can create a poll for your internal needs.</description>
+      <description>{{velocity}}
+  $services.localization.render('contrib.xpoll.WebHome.description')
+{{/velocity}}</description>
+    </property>
+  </object>
+  <object>
+    <class>
+      <name>XWiki.UIExtensionClass</name>
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
+      <content>
+        <disabled>0</disabled>
+        <name>content</name>
+        <number>3</number>
+        <prettyName>Extension Content</prettyName>
+        <rows>10</rows>
+        <size>40</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+      </content>
+      <extensionPointId>
+        <disabled>0</disabled>
+        <name>extensionPointId</name>
+        <number>1</number>
+        <prettyName>Extension Point ID</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </extensionPointId>
+      <name>
+        <disabled>0</disabled>
+        <name>name</name>
+        <number>2</number>
+        <prettyName>Extension ID</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </name>
+      <parameters>
+        <disabled>0</disabled>
+        <name>parameters</name>
+        <number>4</number>
+        <prettyName>Extension Parameters</prettyName>
+        <rows>10</rows>
+        <size>40</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+      </parameters>
+      <scope>
+        <cache>0</cache>
+        <disabled>0</disabled>
+        <displayType>select</displayType>
+        <multiSelect>0</multiSelect>
+        <name>scope</name>
+        <number>5</number>
+        <prettyName>Extension Scope</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators> ,|</separators>
+        <size>1</size>
+        <unmodifiable>0</unmodifiable>
+        <values>wiki=Current Wiki|user=Current User|global=Global</values>
+        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      </scope>
+    </class>
+    <name>XPoll.WebHome</name>
+    <number>0</number>
+    <className>XWiki.UIExtensionClass</className>
+    <guid>3deb46c5-6fc8-4b6d-a765-e2d9861e651d</guid>
+    <property>
+      <content/>
+    </property>
+    <property>
+      <extensionPointId>org.xwiki.platform.panels.Applications</extensionPointId>
+    </property>
+    <property>
+      <name>platform.panels.XPollApplication</name>
+    </property>
+    <property>
+      <parameters>label=$services.localization.render("contrib.xpoll.app.title")
+target=XPoll.WebHome
+icon=icon:application_view_icons</parameters>
+    </property>
+    <property>
+      <scope>wiki</scope>
     </property>
   </object>
   <content>{{include document="AppWithinMinutes.DynamicMessageTool" context="new" /}}
