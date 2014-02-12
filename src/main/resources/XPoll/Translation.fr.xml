@@ -54,8 +54,8 @@ contrib.xpoll.user=Utilisateur
 contrib.xpoll.vote.user.submit=Sauver
 contrib.xpoll.vote.guest.submit=Sauver
 
-contrib.xpoll.name=Titre
-contrib.xpoll.description=Description
-contrib.xpoll.status=Statut
-contrib.xpoll.proposals=Propositions (liste d'éléments séparés par des virgules ou des barres verticales)</content>
+XPoll.XPollClass_name=Titre
+XPoll.XPollClass_description=Description
+XPoll.XPollClass_status=Statut
+XPoll.XPollClass_proposals=Propositions (liste d'éléments séparés par des virgules ou des barres verticales)</content>
 </xwikidoc>

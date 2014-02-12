@@ -90,8 +90,8 @@ contrib.xpoll.user=User
 contrib.xpoll.vote.guest.submit=Save
 contrib.xpoll.vote.user.submit=Save
 
-contrib.xpoll.name=Name
-contrib.xpoll.description=Description
-contrib.xpoll.status=Status
-contrib.xpoll.proposals=Proposals (comma or pipe separated list)</content>
+XPoll.XPollClass_name=Name
+XPoll.XPollClass_description=Description
+XPoll.XPollClass_status=Status
+XPoll.XPollClass_proposals=Proposals (comma or pipe separated list)</content>
 </xwikidoc>

@@ -43,16 +43,16 @@ $xwiki.ssx.use('AppWithinMinutes.ClassSheetGenerator')
 ## We don't have access to the form element to set the CSS class for the vertical form layout standard.
 (% class="xform" %)
 (((
-  ; &lt;label for="XPoll.XPollClass_0_name"&gt;$services.localization.render("contrib.xpoll.name")&lt;/label&gt;##
+  ; &lt;label for="XPoll.XPollClass_0_name"&gt;$services.localization.render("XPoll.XPollClass_name")&lt;/label&gt;##
     (% class="xHint" %)$msg.get('')
   : $doc.display('name')
-  ; &lt;label for="XPoll.XPollClass_0_description"&gt;$services.localization.render("contrib.xpoll.description")&lt;/label&gt;##
+  ; &lt;label for="XPoll.XPollClass_0_description"&gt;$services.localization.render("XPoll.XPollClass_description")&lt;/label&gt;##
     (% class="xHint" %)$msg.get('')
   : $doc.display('description')
-  ; &lt;label for="XPoll.XPollClass_0_status"&gt;$services.localization.render("contrib.xpoll.status")&lt;/label&gt;##
+  ; &lt;label for="XPoll.XPollClass_0_status"&gt;$services.localization.render("XPoll.XPollClass_status")&lt;/label&gt;##
     (% class="xHint" %)$msg.get('')
   : $doc.display('status')
-  ; &lt;label for="XPoll.XPollClass_0_proposals"&gt;$services.localization.render("contrib.xpoll.proposals")&lt;/label&gt;##
+  ; &lt;label for="XPoll.XPollClass_0_proposals"&gt;$services.localization.render("XPoll.XPollClass_proposals")&lt;/label&gt;##
     (% class="xHint" %)$msg.get('')
   : $doc.display('proposals')
 )))
