@@ -28,10 +28,12 @@
 #if($context.action=="edit" || $doc.getValue("status")=="inpreparation")
 
 #if($hasEdit)
-This xpoll is currently in preparation, click "edit" to modify in and activate it.
+$services.localization.render("contrib.xpoll.preparation.hasRight")"
+
 
 #else
-This xpoll is currently in preparation, you do not have the rights to modify it.
+$services.localization.render("contrib.xpoll.preparation.noRight")
+
 
 #end
 
@@ -41,16 +43,16 @@ $xwiki.ssx.use('AppWithinMinutes.ClassSheetGenerator')
 ## We don't have access to the form element to set the CSS class for the vertical form layout standard.
 (% class="xform" %)
 (((
-  ; &lt;label for="XPoll.XPollClass_0_name"&gt;$doc.displayPrettyName('name', false, false)&lt;/label&gt;##
+  ; &lt;label for="XPoll.XPollClass_0_name"&gt;$services.localization.render("XPoll.XPollClass_name")&lt;/label&gt;##
     (% class="xHint" %)$msg.get('')
   : $doc.display('name')
-  ; &lt;label for="XPoll.XPollClass_0_description"&gt;$doc.displayPrettyName('description', false, false)&lt;/label&gt;##
+  ; &lt;label for="XPoll.XPollClass_0_description"&gt;$services.localization.render("XPoll.XPollClass_description")&lt;/label&gt;##
     (% class="xHint" %)$msg.get('')
   : $doc.display('description')
-  ; &lt;label for="XPoll.XPollClass_0_status"&gt;$doc.displayPrettyName('status', false, false)&lt;/label&gt;##
+  ; &lt;label for="XPoll.XPollClass_0_status"&gt;$services.localization.render("XPoll.XPollClass_status")&lt;/label&gt;##
     (% class="xHint" %)$msg.get('')
   : $doc.display('status')
-  ; &lt;label for="XPoll.XPollClass_0_proposals"&gt;$doc.displayPrettyName('proposals', false, false)&lt;/label&gt;##
+  ; &lt;label for="XPoll.XPollClass_0_proposals"&gt;$services.localization.render("XPoll.XPollClass_proposals")&lt;/label&gt;##
     (% class="xHint" %)$msg.get('')
   : $doc.display('proposals')
 )))
@@ -73,7 +75,7 @@ $doc.display('description')
 &lt;form action="$xwiki.getDocument("XPoll.XPollService").getURL("get", "xpage=plain&amp;outputSyntax=plain&amp;page=$doc.fullName")" method="post"&gt;
 {{/html}}
 
-|= User #foreach($proposal in $proposals)|= $proposal #end
+|= $services.localization.render("contrib.xpoll.user") #foreach($proposal in $proposals)|= $proposal #end
 
 #set($foundUser = false)
 #foreach($obj in $doc.getObjects("XPoll.XPollVoteClass"))
@@ -83,36 +85,37 @@ $doc.display('description')
   #set($foundUser = true)
  #end
  #set($votes = $doc.getValue("votes"))
-|= {{html clean="false"}}$xwiki.getUserName($user){{/html}} #foreach($proposal in $proposals) #set($checked = $votes.contains($proposal)) #if($checked) #set($nbvotes = $voteCount.get($proposal)) #set($nbvotes = $nbvotes + 1) #set($ok = $voteCount.put($proposal, $nbvotes)) #end | {{html clean=="false"}}&lt;input type="checkbox" name="${proposal.hashCode()}" #if($checked)CHECKED#end #if($context.user!=$user) disabled #end /&gt;{{/html}} #end  #if($user==$context.user) |(% style="border: none;" %) {{html clean=false}}&lt;input type="submit" value="Save" class="button" onclick="xpollSave(this.form); return false;" /&gt;{{/html}} #end
+|= {{html clean="false"}}$xwiki.getUserName($user){{/html}} #foreach($proposal in $proposals) #set($checked = $votes.contains($proposal)) #if($checked) #set($nbvotes = $voteCount.get($proposal)) #set($nbvotes = $nbvotes + 1) #set($ok = $voteCount.put($proposal, $nbvotes)) #end | {{html clean=="false"}}&lt;input type="checkbox" name="${proposal.hashCode()}" #if($checked)CHECKED#end #if($context.user!=$user) disabled #end /&gt;{{/html}} #end  #if($user==$context.user) |(% style="border: none;" %) {{html clean=false}}&lt;input type="submit" value="$services.localization.render("contrib.xpoll.vote.user.submit")" class="button" onclick="xpollSave(this.form); return false;" /&gt;{{/html}} #end
 
 #end
 #if(!$foundUser &amp;&amp; $context.user!="XWiki.XWikiGuest")
-|= {{html clean="false"}}$xwiki.getUserName($context.user){{/html}} #foreach($proposal in $proposals) #set($checked = false) | {{html clean=="false"}}&lt;input type="checkbox" name="${proposal.hashCode()}" #if($checked)CHECKED#end /&gt;{{/html}} #end |(% style="border: none;" %) {{html clean=false}}&lt;input type="submit" value="Save" class="button" onclick="xpollSave(this.form); return false;" /&gt;{{/html}} 
+|= {{html clean="false"}}$xwiki.getUserName($context.user){{/html}} #foreach($proposal in $proposals) #set($checked = false) | {{html clean=="false"}}&lt;input type="checkbox" name="${proposal.hashCode()}" #if($checked)CHECKED#end /&gt;{{/html}} #end |(% style="border: none;" %) {{html clean=false}}&lt;input type="submit" value="$services.localization.render("contrib.xpoll.vote.user.submit")" class="button" onclick="xpollSave(this.form); return false;" /&gt;{{/html}} 
 #end
-|= Number of votes #foreach($proposal in $proposals)|= $!voteCount.get($proposal) #end
+|= $services.localization.render("contrib.xpoll.numberVotes") #foreach($proposal in $proposals)|= $!voteCount.get($proposal) #end
 
 {{html clean="false"}}
 &lt;/form&gt;
 {{/html}}
 
 #elseif($status=="finished")
-Vote is finished. Here are the results:
+$services.localization.render("contrib.xpoll.finish.message")
+
 
 #set($voteCount = $util.hashMap)
 #foreach($proposal in $proposals)
  #set($ok = $voteCount.put($proposal, 0))
 #end
 
-|= User #foreach($proposal in $proposals)|= $proposal #end
+|= $services.localization.render("contrib.xpoll.user") #foreach($proposal in $proposals)|= $proposal #end
 
 #foreach($obj in $doc.getObjects("XPoll.XPollVoteClass"))
  #set($ok = $doc.use($obj))
  #set($user = $doc.getValue("user"))
  #set($votes = $doc.getValue("votes"))
-|= {{html clean="false"}}$xwiki.getUserName($user){{/html}} #foreach($proposal in $proposals) #set($checked = $votes.contains($proposal)) #if($checked) #set($nbvotes = $voteCount.get($proposal)) #set($nbvotes = $nbvotes + 1) #set($ok = $voteCount.put($proposal, $nbvotes)) #end | #if$($context.action=="export") #if($checked) X #end #else {{html clean=="false"}}&lt;input type="checkbox" name="$proposal" #if($checked)CHECKED#end disabled /&gt;{{/html}} #end #end
+|= {{html clean="false"}}$xwiki.getUserName($user) {{/html}} #foreach($proposal in $proposals) #set($checked = $votes.contains($proposal)) #if($checked) #set($nbvotes = $voteCount.get($proposal)) #set($nbvotes = $nbvotes + 1) #set($ok = $voteCount.put($proposal, $nbvotes)) #end | #if$($context.action=="export") #if($checked) X #end #else {{html clean=="false"}}&lt;input type="checkbox" name="$proposal" #if($checked)CHECKED#end disabled /&gt;{{/html}} #end #end
 
 #end
-|= Number of votes #foreach($proposal in $proposals)|= $voteCount.get($proposal) #end
+|= $services.localization.render("contrib.xpoll.numberVotes") #foreach($proposal in $proposals)|= $voteCount.get($proposal) #end
 
 #end
 #end
