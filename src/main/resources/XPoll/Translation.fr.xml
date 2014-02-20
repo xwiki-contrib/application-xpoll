@@ -37,11 +37,11 @@ XPoll.XPollClass_status_finished=Terminé
 contrib.xpoll.WebHome.description=Bienvenue sur la page de l'application XPoll. Vous pouvez créer un sondage en fonction de vos besoins.
 contrib.xpoll.WebHome.name=Nom
 contrib.xpoll.WebHome.status=Statut
-contrib.xpoll.WebHome.winner=Vainqueur 
+contrib.xpoll.WebHome.winner=Résultat 
 
 xpoll.livetable.name=Nom
 xpoll.livetable.status=Statut
-xpoll.livetable.winner=Vainqueur 
+xpoll.livetable.winner=Résultat 
 xpoll.livetable._actions=Actions
 
 contrib.xpoll.preparation.hasRight=Ce xpoll est actuellement en préparation, cliquez sur "editer" pour le modifier et l'activer.
