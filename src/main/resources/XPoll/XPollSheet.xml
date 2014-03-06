@@ -72,7 +72,7 @@ $doc.display('description')
  #set($ok = $voteCount.put($proposal, 0))
 #end
 {{html clean="false"}}
-&lt;form action="$xwiki.getDocument("XPoll.XPollService").getURL("get", "xpage=plain&amp;outputSyntax=plain&amp;page=$doc.fullName")" method="post"&gt;
+&lt;form action="$xwiki.getDocument("XPoll.XPollService").getURL("get", "xpage=plain&amp;outputSyntax=plain&amp;page=$escapetool.url($doc.fullName)")" method="post"&gt;
 {{/html}}
 
 |= $services.localization.render("contrib.xpoll.user") #foreach($proposal in $proposals)|= $proposal #end
