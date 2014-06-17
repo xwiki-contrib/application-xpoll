@@ -15,7 +15,7 @@
   <date>1325372400000</date>
   <contentUpdateDate>1325372400000</contentUpdateDate>
   <version>1.1</version>
-  <title>$!doc.getObject('XPoll.XPollClass').getProperty('name').value</title>
+  <title>#if("$!doc.getObject('XPoll.XPollClass').getProperty('name').value" != '')$!doc.getObject('XPoll.XPollClass').getProperty('name').value #else ${doc.name} #end</title>
   <defaultTemplate/>
   <validationScript/>
   <comment/>
@@ -35,7 +35,17 @@ $services.localization.render("contrib.xpoll.preparation.noRight")
 
 
 #end
-
+#*
+ Displays the value of the name property as the title of the document. If value is empty (e.g. creation step), displays the document name.
+*#
+#macro(displayPollTitle)
+  #set($pollObj = $!doc.getObject('XPoll.XPollClass'))
+  #if("$!pollObj.getProperty('name').value" != '')
+    $doc.display('name')
+  #else
+    {{html}}&lt;input id="XPoll.XPollClass_${pollObj.number}_name" type="text" value="$doc.name" size="30" name="XPoll.XPollClass_${pollObj.number}_name"&gt;&lt;/input&gt;{{/html}}
+  #end
+#end
 {{html wiki="true"}}
 $xwiki.ssx.use('AppWithinMinutes.ClassSheetGenerator')
 #set($discard = $doc.use('XPoll.XPollClass'))
@@ -44,7 +54,7 @@ $xwiki.ssx.use('AppWithinMinutes.ClassSheetGenerator')
 (((
   ; &lt;label for="XPoll.XPollClass_0_name"&gt;$doc.displayPrettyName('name', false, false)&lt;/label&gt;##
     (% class="xHint" %)$msg.get('')
-  : $doc.display('name')
+  : #displayPollTitle()
   ; &lt;label for="XPoll.XPollClass_0_description"&gt;$doc.displayPrettyName('description', false, false)&lt;/label&gt;##
     (% class="xHint" %)$msg.get('')
   : $doc.display('description')
