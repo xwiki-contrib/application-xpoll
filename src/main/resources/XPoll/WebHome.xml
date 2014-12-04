@@ -172,7 +172,7 @@
     <property>
       <parameters>label=$services.localization.render("contrib.xpoll.app.title")
 target=XPoll.WebHome
-icon=icon:application_view_icons</parameters>
+icon=icon:chart_pie</parameters>
     </property>
     <property>
       <scope>wiki</scope>
