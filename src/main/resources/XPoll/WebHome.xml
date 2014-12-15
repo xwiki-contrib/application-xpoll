@@ -1,29 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<xwikidoc>
+<xwikidoc version="1.1">
   <web>XPoll</web>
   <name>WebHome</name>
   <language/>
   <defaultLanguage/>
   <translation>0</translation>
-  <parent>Main.WebHome</parent>
   <creator>xwiki:XWiki.Admin</creator>
+  <parent>Main.WebHome</parent>
   <author>xwiki:XWiki.Admin</author>
-  <customClass/>
   <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
   <creationDate>1325372400000</creationDate>
   <date>1325372400000</date>
   <contentUpdateDate>1325372400000</contentUpdateDate>
   <version>1.1</version>
   <title>$services.localization.render("contrib.xpoll.app.hometitle")</title>
-  <template/>
-  <defaultTemplate/>
-  <validationScript/>
   <comment/>
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.0</syntaxId>
   <hidden>false</hidden>
+  <content>{{include document="AppWithinMinutes.DynamicMessageTool" context="new" /}}
+
+{{velocity}}
+#set($originalMsg = $msg)
+#set($msg = $services.dynamicMessageToolFactory.createDynamicMessageTool($msg, {
+  'xpoll.livetable.name': 'Name',
+  'XPoll.XPollClass_status_inpreparation': 'In Preparation',
+  'XPoll.XPollClass_status_active': 'Active',
+  'XPoll.XPollClass_status_finished': 'Finished',
+  'xpoll.livetable.status': 'Status',
+  'xpoll.livetable.proposals': 'Proposals',
+  'xpoll.livetable.winner': 'Winner',
+  'xpoll.livetable._actions.edit': $msg.get('platform.appwithinminutes.appLiveTableEditEntryActionName'),
+  'xpoll.livetable._actions.delete': $msg.get('platform.appwithinminutes.appLiveTableDeleteEntryActionName'),
+  'xpoll.livetable._actions': $msg.get('platform.appwithinminutes.liveTableEditorActionsColumnName')
+}))
+#set($columnsProperties = {
+  'name': {'type': 'text', 'link' : 'view', 'size': 10, 'filterable': true, 'sortable': true, 'html': false},
+  'status': {'type': 'list', 'size': 10, 'filterable': true, 'sortable': true, 'html': false},
+  'winner': {'type': 'text', 'size': 10, 'filterable': true, 'sortable': true, 'html': false},
+  '_actions': {'html': true, 'sortable': false, 'actions': ['edit', 'delete']}
+})
+#set($options = {
+  'className': 'XPoll.XPollClass',
+  'resultPage' : 'AppWithinMinutes.LiveTableGenerator',
+  'translationPrefix': 'xpoll.livetable.',
+  'tagCloud': true,
+  'rowCount': 15,
+  'maxPages': 10,
+  'selectedColumn': 'name',
+  'defaultOrder': 'asc'
+})
+#set($columns = ['name', 'status', 'winner', '_actions'])
+#livetable('xpoll' $columns $columnsProperties $options)
+#set($msg = $originalMsg)
+{{/velocity}}</content>
   <object>
+    <name>XPoll.WebHome</name>
+    <number>0</number>
+    <className>AppWithinMinutes.LiveTableClass</className>
+    <guid>fda99a8e-2fec-4cfc-9b59-b2f7eae788d9</guid>
     <class>
       <name>AppWithinMinutes.LiveTableClass</name>
       <customClass/>
@@ -75,10 +111,6 @@
         <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
       </description>
     </class>
-    <name>XPoll.WebHome</name>
-    <number>0</number>
-    <className>AppWithinMinutes.LiveTableClass</className>
-    <guid>fda99a8e-2fec-4cfc-9b59-b2f7eae788d9</guid>
     <property>
       <class>XPoll.XPollClass</class>
     </property>
@@ -92,6 +124,42 @@
     </property>
   </object>
   <object>
+    <name>XPoll.WebHome</name>
+    <number>0</number>
+    <className>XWiki.DocumentSheetBinding</className>
+    <guid>fe43fe9e-4a9d-4aea-ae87-b5d5242e4857</guid>
+    <class>
+      <name>XWiki.DocumentSheetBinding</name>
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
+      <sheet>
+        <customDisplay/>
+        <disabled>0</disabled>
+        <name>sheet</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Sheet</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage/>
+        <validationRegExp/>
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </sheet>
+    </class>
+    <property>
+      <sheet>WebHomeSheet</sheet>
+    </property>
+  </object>
+  <object>
+    <name>XPoll.WebHome</name>
+    <number>0</number>
+    <className>XWiki.UIExtensionClass</className>
+    <guid>3deb46c5-6fc8-4b6d-a765-e2d9861e651d</guid>
     <class>
       <name>XWiki.UIExtensionClass</name>
       <customClass/>
@@ -156,10 +224,6 @@
         <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
       </scope>
     </class>
-    <name>XPoll.WebHome</name>
-    <number>0</number>
-    <className>XWiki.UIExtensionClass</className>
-    <guid>3deb46c5-6fc8-4b6d-a765-e2d9861e651d</guid>
     <property>
       <content/>
     </property>
@@ -178,40 +242,4 @@ icon=icon:chart_pie</parameters>
       <scope>wiki</scope>
     </property>
   </object>
-  <content>{{include document="AppWithinMinutes.DynamicMessageTool" context="new" /}}
-
-{{velocity}}
-#set($originalMsg = $msg)
-#set($msg = $services.dynamicMessageToolFactory.createDynamicMessageTool($msg, {
-  'xpoll.livetable.name': 'Name',
-  'XPoll.XPollClass_status_inpreparation': 'In Preparation',
-  'XPoll.XPollClass_status_active': 'Active',
-  'XPoll.XPollClass_status_finished': 'Finished',
-  'xpoll.livetable.status': 'Status',
-  'xpoll.livetable.proposals': 'Proposals',
-  'xpoll.livetable.winner': 'Winner',
-  'xpoll.livetable._actions.edit': $msg.get('platform.appwithinminutes.appLiveTableEditEntryActionName'),
-  'xpoll.livetable._actions.delete': $msg.get('platform.appwithinminutes.appLiveTableDeleteEntryActionName'),
-  'xpoll.livetable._actions': $msg.get('platform.appwithinminutes.liveTableEditorActionsColumnName')
-}))
-#set($columnsProperties = {
-  'name': {'type': 'text', 'link' : 'view', 'size': 10, 'filterable': true, 'sortable': true, 'html': false},
-  'status': {'type': 'list', 'size': 10, 'filterable': true, 'sortable': true, 'html': false},
-  'winner': {'type': 'text', 'size': 10, 'filterable': true, 'sortable': true, 'html': false},
-  '_actions': {'html': true, 'sortable': false, 'actions': ['edit', 'delete']}
-})
-#set($options = {
-  'className': 'XPoll.XPollClass',
-  'resultPage' : 'AppWithinMinutes.LiveTableGenerator',
-  'translationPrefix': 'xpoll.livetable.',
-  'tagCloud': true,
-  'rowCount': 15,
-  'maxPages': 10,
-  'selectedColumn': 'name',
-  'defaultOrder': 'asc'
-})
-#set($columns = ['name', 'status', 'winner', '_actions'])
-#livetable('xpoll' $columns $columnsProperties $options)
-#set($msg = $originalMsg)
-{{/velocity}}</content>
 </xwikidoc>
