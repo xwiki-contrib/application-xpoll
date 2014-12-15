@@ -126,6 +126,38 @@
   <object>
     <name>XPoll.WebHome</name>
     <number>0</number>
+    <className>XWiki.DocumentSheetBinding</className>
+    <guid>fe43fe9e-4a9d-4aea-ae87-b5d5242e4857</guid>
+    <class>
+      <name>XWiki.DocumentSheetBinding</name>
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
+      <sheet>
+        <customDisplay/>
+        <disabled>0</disabled>
+        <name>sheet</name>
+        <number>1</number>
+        <picker>0</picker>
+        <prettyName>Sheet</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <validationMessage/>
+        <validationRegExp/>
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </sheet>
+    </class>
+    <property>
+      <sheet>WebHomeSheet</sheet>
+    </property>
+  </object>
+  <object>
+    <name>XPoll.WebHome</name>
+    <number>0</number>
     <className>XWiki.UIExtensionClass</className>
     <guid>3deb46c5-6fc8-4b6d-a765-e2d9861e651d</guid>
     <class>
