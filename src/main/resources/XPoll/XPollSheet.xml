@@ -1,29 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<xwikidoc>
+<xwikidoc version="1.1">
   <web>XPoll</web>
   <name>XPollSheet</name>
   <language/>
   <defaultLanguage/>
   <translation>0</translation>
-  <parent>XPoll.XPollClass</parent>
   <creator>xwiki:XWiki.Admin</creator>
+  <parent>XPoll.XPollClass</parent>
   <author>xwiki:XWiki.Admin</author>
-  <customClass/>
   <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
   <creationDate>1325372400000</creationDate>
   <date>1325372400000</date>
   <contentUpdateDate>1325372400000</contentUpdateDate>
   <version>1.1</version>
   <title>#if("$!doc.getObject('XPoll.XPollClass').getProperty('name').value" != '')$!doc.getObject('XPoll.XPollClass').getProperty('name').value #else ${doc.name} #end</title>
-  <defaultTemplate/>
-  <validationScript/>
   <comment/>
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>true</hidden>
   <content>{{velocity}}
 #set($ok = $xwiki.jsx.use("XPoll.XPollJSExtension"))
+#set($ok = $xwiki.ssx.use("XPoll.XPollSheet"))
+
 #if($context.action=="edit" || $doc.getValue("status")=="inpreparation")
 
 #if($hasEdit)
@@ -84,6 +83,7 @@ $doc.display('description')
 &lt;form action="$xwiki.getDocument("XPoll.XPollService").getURL("get", "xpage=plain&amp;outputSyntax=plain&amp;page=$escapetool.url($doc.fullName)")" method="post"&gt;
 {{/html}}
 
+(% class='xpoll' %)
 |= $services.localization.render("contrib.xpoll.user") #foreach($proposal in $proposals)|= $proposal #end
 
 #set($foundUser = false)
@@ -128,4 +128,104 @@ $services.localization.render("contrib.xpoll.finish.message")
 #end
 #end
 {{/velocity}}</content>
+  <object>
+    <name>XPoll.XPollSheet</name>
+    <number>0</number>
+    <className>XWiki.StyleSheetExtension</className>
+    <guid>2e6c978e-e29f-499b-932d-37acb37bd183</guid>
+    <class>
+      <name>XWiki.StyleSheetExtension</name>
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
+      <cache>
+        <cache>0</cache>
+        <disabled>0</disabled>
+        <displayType>select</displayType>
+        <multiSelect>0</multiSelect>
+        <name>cache</name>
+        <number>5</number>
+        <prettyName>Caching policy</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators> ,|</separators>
+        <size>1</size>
+        <unmodifiable>0</unmodifiable>
+        <values>long|short|default|forbid</values>
+        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      </cache>
+      <code>
+        <disabled>0</disabled>
+        <name>code</name>
+        <number>2</number>
+        <prettyName>Code</prettyName>
+        <rows>20</rows>
+        <size>50</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+      </code>
+      <name>
+        <disabled>0</disabled>
+        <name>name</name>
+        <number>1</number>
+        <prettyName>Name</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </name>
+      <parse>
+        <disabled>0</disabled>
+        <displayFormType>select</displayFormType>
+        <displayType>yesno</displayType>
+        <name>parse</name>
+        <number>4</number>
+        <prettyName>Parse content</prettyName>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
+      </parse>
+      <use>
+        <cache>0</cache>
+        <disabled>0</disabled>
+        <displayType>select</displayType>
+        <multiSelect>0</multiSelect>
+        <name>use</name>
+        <number>3</number>
+        <prettyName>Use this extension</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators> ,|</separators>
+        <size>1</size>
+        <unmodifiable>0</unmodifiable>
+        <values>currentPage|onDemand|always</values>
+        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      </use>
+    </class>
+    <property>
+      <cache>long</cache>
+    </property>
+    <property>
+      <code>#template('colorThemeInit.vm')
+
+.xpoll th, .xpoll td {
+  border: 1px solid $theme.borderColor;
+}
+
+.xpoll th {
+  background-color: $theme.backgroundSecondaryColor;
+}</code>
+    </property>
+    <property>
+      <name>XPoll CSS Extension</name>
+    </property>
+    <property>
+      <parse>1</parse>
+    </property>
+    <property>
+      <use>onDemand</use>
+    </property>
+  </object>
 </xwikidoc>
