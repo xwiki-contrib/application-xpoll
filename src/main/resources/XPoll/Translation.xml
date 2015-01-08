@@ -59,7 +59,7 @@
   </object>
   <content>contrib.xpoll.app.title=XPoll
   
-contrib.xpoll.app.hometitle=XPoll Home
+contrib.xpoll.home.title=XPoll
 
 contrib.xpoll.status.active=Active
 contrib.xpoll.status.inPreparation=In preparation
