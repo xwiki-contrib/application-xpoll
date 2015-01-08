@@ -23,17 +23,14 @@
 #set($ok = $xwiki.jsx.use("XPoll.XPollJSExtension"))
 #set($ok = $xwiki.ssx.use("XPoll.XPollSheet"))
 
+#if($hasEdit &amp;&amp; $context.action=='view' &amp;&amp; $doc.getValue('status')=='inpreparation')
+  $services.localization.render("contrib.xpoll.preparation.hasRight")
+#elseif(!$hasEdit)
+  $services.localization.render("contrib.xpoll.preparation.noRight")
+#end
+
 #if($context.action=="edit" || $doc.getValue("status")=="inpreparation")
 
-#if($hasEdit)
-$services.localization.render("contrib.xpoll.preparation.hasRight")
-
-
-#else
-$services.localization.render("contrib.xpoll.preparation.noRight")
-
-
-#end
 #*
  Displays the value of the name property as the title of the document. If value is empty (e.g. creation step), displays the document name.
 *#
