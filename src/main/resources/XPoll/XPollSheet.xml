@@ -58,7 +58,7 @@ $xwiki.ssx.use('AppWithinMinutes.ClassSheetGenerator')
     (% class="xHint" %)$msg.get('')
   : $doc.display('status')
   ; &lt;label for="XPoll.XPollClass_0_proposals"&gt;$doc.displayPrettyName('proposals', false, false)&lt;/label&gt;##
-    (% class="xHint" %)$msg.get('')
+    (% class="xHint" %)$services.localization.render('XPoll.XPollClass_proposals_hint')
   : $doc.display('proposals')
 )))
 {{/html}}
