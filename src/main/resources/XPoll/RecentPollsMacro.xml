@@ -138,14 +138,12 @@
       <code>{{velocity}}
 #set($discard = $doc.use('XPoll.XPollClass'))
 #set($discard = $xwiki.ssx.use('XPoll.XPollSheet'))
-#set($discard = $services.localization.use('document', 'XPoll.Translations'))
 ##
 #set($hql = ", BaseObject obj where doc.fullName=obj.name and obj.className='XPoll.XPollClass' and doc.name!='XPollTemplate' order by doc.creationDate desc")
 #set($results = $services.query.hql($hql).execute())
 #set($i = 0)
 #set ($obj = $document.getObject('XPoll.XPollClass'))
 ##
-{{html wiki="true"}}
   (% class="polls-recent" %)
   (((
   #foreach($item in $results)
@@ -164,7 +162,6 @@
   #else
     (% class="polls" %)((([[$services.localization.render('polls.seeallfiles')&gt;&gt;XPoll.WebHome||queryString="#?driveNode=%2FallFiles"]])))
   #end
-{{/html}}
 {{/velocity}}</code>
     </property>
     <property>
