@@ -165,6 +165,22 @@ $services.localization.render("contrib.xpoll.finish.message")
         <unmodifiable>0</unmodifiable>
         <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
       </code>
+      <contentType>
+        <cache>0</cache>
+        <disabled>0</disabled>
+        <displayType>select</displayType>
+        <multiSelect>0</multiSelect>
+        <name>contentType</name>
+        <number>6</number>
+        <prettyName>Content Type</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators> ,|</separators>
+        <size>1</size>
+        <unmodifiable>0</unmodifiable>
+        <values>CSS|LESS</values>
+        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      </contentType>
       <name>
         <disabled>0</disabled>
         <name>name</name>
@@ -213,7 +229,18 @@ $services.localization.render("contrib.xpoll.finish.message")
 
 .xpoll th {
   background-color: $theme.backgroundSecondaryColor;
+}
+
+.polls:last-of-type {
+  margin-top: 10px;
+}
+
+.noitems {
+  font-size: inherit;
 }</code>
+    </property>
+    <property>
+      <contentType>CSS</contentType>
     </property>
     <property>
       <name>XPoll CSS Extension</name>

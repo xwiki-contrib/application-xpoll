@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xwikidoc version="1.1">
+  <web>XPoll</web>
+  <name>RecentPollsMacro</name>
+  <language/>
+  <defaultLanguage/>
+  <translation>0</translation>
+  <creator>xwiki:XWiki.Admin</creator>
+  <parent>XPoll.WebHome</parent>
+  <creationDate>1421934651000</creationDate>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
+  <date>1421941988000</date>
+  <contentUpdateDate>1421937083000</contentUpdateDate>
+  <version>1.1</version>
+  <title/>
+  <comment/>
+  <minorEdit>false</minorEdit>
+  <syntaxId>xwiki/2.1</syntaxId>
+  <hidden>false</hidden>
+  <content/>
+  <object>
+    <name>XPoll.RecentPollsMacro</name>
+    <number>0</number>
+    <className>XWiki.WikiMacroClass</className>
+    <guid>287bb64c-3774-4d5e-88e6-774bedd4d9e5</guid>
+    <class>
+      <name>XWiki.WikiMacroClass</name>
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
+      <code>
+        <disabled>0</disabled>
+        <name>code</name>
+        <number>9</number>
+        <prettyName>Macro code</prettyName>
+        <rows>20</rows>
+        <size>40</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+      </code>
+      <contentDescription>
+        <disabled>0</disabled>
+        <name>contentDescription</name>
+        <number>8</number>
+        <prettyName>Content description (Not applicable for "No content" type)</prettyName>
+        <rows>5</rows>
+        <size>40</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+      </contentDescription>
+      <contentType>
+        <cache>0</cache>
+        <disabled>0</disabled>
+        <displayType>select</displayType>
+        <multiSelect>0</multiSelect>
+        <name>contentType</name>
+        <number>7</number>
+        <prettyName>Macro content type</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator>|</separator>
+        <separators>|</separators>
+        <size>1</size>
+        <unmodifiable>0</unmodifiable>
+        <values>Optional|Mandatory|No content</values>
+        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      </contentType>
+      <defaultCategory>
+        <disabled>0</disabled>
+        <name>defaultCategory</name>
+        <number>4</number>
+        <prettyName>Default category</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </defaultCategory>
+      <description>
+        <disabled>0</disabled>
+        <name>description</name>
+        <number>3</number>
+        <prettyName>Macro description</prettyName>
+        <rows>5</rows>
+        <size>40</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+      </description>
+      <id>
+        <disabled>0</disabled>
+        <name>id</name>
+        <number>1</number>
+        <prettyName>Macro id</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </id>
+      <name>
+        <disabled>0</disabled>
+        <name>name</name>
+        <number>2</number>
+        <prettyName>Macro name</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </name>
+      <supportsInlineMode>
+        <disabled>0</disabled>
+        <displayFormType>select</displayFormType>
+        <displayType>yesno</displayType>
+        <name>supportsInlineMode</name>
+        <number>5</number>
+        <prettyName>Supports inline mode</prettyName>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
+      </supportsInlineMode>
+      <visibility>
+        <cache>0</cache>
+        <disabled>0</disabled>
+        <displayType>select</displayType>
+        <multiSelect>0</multiSelect>
+        <name>visibility</name>
+        <number>6</number>
+        <prettyName>Macro visibility</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator>|</separator>
+        <separators>|</separators>
+        <size>1</size>
+        <unmodifiable>0</unmodifiable>
+        <values>Current User|Current Wiki|Global</values>
+        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      </visibility>
+    </class>
+    <property>
+      <code>{{velocity}}
+#set($discard = $doc.use('XPoll.XPollClass'))
+#set($discard = $xwiki.ssx.use('XPoll.XPollSheet'))
+##
+#set($hql = ", BaseObject obj where doc.fullName=obj.name and obj.className='XPoll.XPollClass' and doc.name!='XPollTemplate' order by doc.creationDate desc")
+#set($results = $services.query.hql($hql).execute())
+#set($i = 0)
+#set ($obj = $document.getObject('XPoll.XPollClass'))
+##
+  (% class="polls-recent" %)
+  (((
+  #foreach($item in $results)
+    #set($document = $xwiki.getDocument($item))
+    #if($document.hasAccessLevel('view', $xcontext.user) == 'true')
+      (% class="polls noitems" %)((([[$document.title&gt;&gt;$item]] $services.localization.render('polls.author', ["[[$xwiki.getUserName($document.author, false)&gt;&gt;$document.author]]"]) $services.localization.render('polls.date', [$xwiki.formatDate($document.date, 'dd/MM/yyyy hh:mm')]))))
+      #set($i = $i + 1)
+      #if($i == $xcontext.macro.params.limit)
+        #break
+      #end
+    #end
+  #end
+  #if($i == 0)
+    (% class="polls noitems" %)((($services.localization.render('polls.nofiles'))))
+    (% class="polls" %)((([[$services.localization.render('polls.addfiles')&gt;&gt;XPoll.WebHome||queryString="#?driveNode=WebHome"]])))
+  #else
+    (% class="polls" %)((([[$services.localization.render('polls.seeallfiles')&gt;&gt;XPoll.WebHome||queryString="#?driveNode=%2FallFiles"]])))
+  #end
+{{/velocity}}</code>
+    </property>
+    <property>
+      <contentDescription/>
+    </property>
+    <property>
+      <contentType>No content</contentType>
+    </property>
+    <property>
+      <defaultCategory/>
+    </property>
+    <property>
+      <description>Displays the N most recent polls.</description>
+    </property>
+    <property>
+      <id>pollsrecent</id>
+    </property>
+    <property>
+      <name>Recent Polls</name>
+    </property>
+    <property>
+      <supportsInlineMode>1</supportsInlineMode>
+    </property>
+    <property>
+      <visibility>Global</visibility>
+    </property>
+  </object>
+  <object>
+    <name>XPoll.RecentPollsMacro</name>
+    <number>0</number>
+    <className>XWiki.WikiMacroParameterClass</className>
+    <guid>b5c622e3-bc5e-479e-aa86-511fbd61344b</guid>
+    <class>
+      <name>XWiki.WikiMacroParameterClass</name>
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
+      <defaultValue>
+        <disabled>0</disabled>
+        <name>defaultValue</name>
+        <number>4</number>
+        <prettyName>Parameter default value</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </defaultValue>
+      <description>
+        <disabled>0</disabled>
+        <name>description</name>
+        <number>2</number>
+        <prettyName>Parameter description</prettyName>
+        <rows>5</rows>
+        <size>40</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+      </description>
+      <mandatory>
+        <disabled>0</disabled>
+        <displayFormType>select</displayFormType>
+        <displayType>yesno</displayType>
+        <name>mandatory</name>
+        <number>3</number>
+        <prettyName>Parameter mandatory</prettyName>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
+      </mandatory>
+      <name>
+        <disabled>0</disabled>
+        <name>name</name>
+        <number>1</number>
+        <prettyName>Parameter name</prettyName>
+        <size>30</size>
+        <unmodifiable>0</unmodifiable>
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+      </name>
+    </class>
+    <property>
+      <defaultValue>5</defaultValue>
+    </property>
+    <property>
+      <description>Number of maximum entries.</description>
+    </property>
+    <property>
+      <mandatory/>
+    </property>
+    <property>
+      <name>limit</name>
+    </property>
+  </object>
+</xwikidoc>
