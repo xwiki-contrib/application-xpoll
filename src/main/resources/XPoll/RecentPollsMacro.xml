@@ -7,8 +7,8 @@
   <defaultLanguage/>
   <translation>0</translation>
   <creator>xwiki:XWiki.Admin</creator>
-  <parent>XPoll.WebHome</parent>
   <creationDate>1421934651000</creationDate>
+  <parent>XPoll.WebHome</parent>
   <author>xwiki:XWiki.Admin</author>
   <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
   <date>1421941988000</date>
@@ -149,7 +149,7 @@
   #foreach($item in $results)
     #set($document = $xwiki.getDocument($item))
     #if($document.hasAccessLevel('view', $xcontext.user) == 'true')
-      (% class="polls noitems" %)((([[$document.title&gt;&gt;$item]] $services.localization.render('polls.author', ["[[$xwiki.getUserName($document.author, false)&gt;&gt;$document.author]]"]) $services.localization.render('polls.date', [$xwiki.formatDate($document.date, 'dd/MM/yyyy hh:mm')]))))
+      (% class="polls secondary" %)((([[$document.title&gt;&gt;$item]] $services.localization.render('polls.author', ["[[$xwiki.getUserName($document.author, false)&gt;&gt;$document.author]]"]) $services.localization.render('polls.date', [$xwiki.formatDate($document.date, 'dd/MM/yyyy hh:mm')]))))
       #set($i = $i + 1)
       #if($i == $xcontext.macro.params.limit)
         #break
@@ -157,7 +157,7 @@
     #end
   #end
   #if($i == 0)
-    (% class="polls noitems" %)((($services.localization.render('polls.nofiles'))))
+    (% class="polls secondary" %)((($services.localization.render('polls.nofiles'))))
     (% class="polls" %)((([[$services.localization.render('polls.addfiles')&gt;&gt;XPoll.WebHome||queryString="#?driveNode=WebHome"]])))
   #else
     (% class="polls" %)((([[$services.localization.render('polls.seeallfiles')&gt;&gt;XPoll.WebHome||queryString="#?driveNode=%2FallFiles"]])))
