@@ -49,16 +49,16 @@ $xwiki.ssx.use('AppWithinMinutes.ClassSheetGenerator')
 (% class="xform" %)
 (((
   ; &lt;label for="XPoll.XPollClass_0_name"&gt;$doc.displayPrettyName('name', false, false)&lt;/label&gt;##
-    (% class="xHint" %)$msg.get('')
+    (% class="xHint" %)$services.localization.render('')
   : #displayPollTitle()
   ; &lt;label for="XPoll.XPollClass_0_description"&gt;$doc.displayPrettyName('description', false, false)&lt;/label&gt;##
-    (% class="xHint" %)$msg.get('')
+    (% class="xHint" %)$services.localization.render('')
   : $doc.display('description')
   ; &lt;label for="XPoll.XPollClass_0_status"&gt;$doc.displayPrettyName('status', false, false)&lt;/label&gt;##
-    (% class="xHint" %)$msg.get('')
+    (% class="xHint" %)$services.localization.render('')
   : $doc.display('status')
   ; &lt;label for="XPoll.XPollClass_0_proposals"&gt;$doc.displayPrettyName('proposals', false, false)&lt;/label&gt;##
-    (% class="xHint" %)$msg.get('')
+    (% class="xHint" %)$services.localization.render('XPoll.XPollClass_proposals_hint')
   : $doc.display('proposals')
 )))
 {{/html}}

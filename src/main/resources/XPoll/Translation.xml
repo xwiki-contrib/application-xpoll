@@ -55,7 +55,8 @@ contrib.xpoll.vote.user.submit=Save
 XPoll.XPollClass_name=Name
 XPoll.XPollClass_description=Description
 XPoll.XPollClass_status=Status
-XPoll.XPollClass_proposals=Proposals (comma or pipe separated list)
+XPoll.XPollClass_proposals=Proposals
+XPoll.XPollClass_proposals_hint=(Comma or pipe separated list)
 
 # Generic
 polls.author=by {0}

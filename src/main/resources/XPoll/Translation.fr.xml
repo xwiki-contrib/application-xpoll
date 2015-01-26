@@ -54,7 +54,8 @@ contrib.xpoll.vote.guest.submit=Sauver
 XPoll.XPollClass_name=Titre
 XPoll.XPollClass_description=Description
 XPoll.XPollClass_status=Statut
-XPoll.XPollClass_proposals=Propositions (liste d'éléments séparés par des virgules ou des barres verticales)
+XPoll.XPollClass_proposals=Propositions
+XPoll.XPollClass_proposals_hint=(Liste d'éléments séparés par des virgules ou des barres verticales)
 
 # Generic
 polls.author=par {0}
