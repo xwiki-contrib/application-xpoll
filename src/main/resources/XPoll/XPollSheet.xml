@@ -231,12 +231,16 @@ $services.localization.render("contrib.xpoll.finish.message")
   background-color: $theme.backgroundSecondaryColor;
 }
 
+.polls {
+  width: 100%;
+}
+
 .polls:last-of-type {
   margin-top: 10px;
 }
 
-.noitems {
-  font-size: inherit;
+.polls.secondary {
+  color: $theme.textSecondaryColor;
 }</code>
     </property>
     <property>
