@@ -19,7 +19,7 @@
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>true</hidden>
-  <content>contrib.xpoll.app.title=XPoll
+  <content>contrib.xpoll.app.title=Polls
   
 contrib.xpoll.home.title=Polls
 
