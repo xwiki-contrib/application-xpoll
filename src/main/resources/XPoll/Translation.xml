@@ -21,7 +21,7 @@
   <hidden>true</hidden>
   <content>contrib.xpoll.app.title=XPoll
   
-contrib.xpoll.home.title=XPoll
+contrib.xpoll.home.title=Polls
 
 contrib.xpoll.status.active=Active
 contrib.xpoll.status.inPreparation=In preparation
