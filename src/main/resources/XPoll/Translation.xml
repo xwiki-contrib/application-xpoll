@@ -66,7 +66,7 @@ polls.addfiles=Add poll
 polls.seeallfiles=See all polls
 
 # Recent ideas macro
-polls.recentpolls.title=Recent polls</content>
+polls.recentpolls.title=Recent Polls</content>
   <object>
     <name>XPoll.Translation</name>
     <number>0</number>
