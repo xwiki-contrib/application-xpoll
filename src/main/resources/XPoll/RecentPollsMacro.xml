@@ -158,7 +158,9 @@
   #end
   #if($i == 0)
     (% class="polls secondary" %)((($services.localization.render('polls.nofiles'))))
-    (% class="polls" %)((([[$services.localization.render('polls.addfiles')&gt;&gt;XPoll.WebHome||queryString="#?driveNode=WebHome"]])))
+    #if($hasEdit)
+      (% class="polls" %)((([[$services.localization.render('polls.addfiles')&gt;&gt;XPoll.WebHome||queryString="#?driveNode=WebHome"]])))
+    #end
   #else
     (% class="polls" %)((([[$services.localization.render('polls.seeallfiles')&gt;&gt;XPoll.WebHome||queryString="#?driveNode=%2FallFiles"]])))
   #end
