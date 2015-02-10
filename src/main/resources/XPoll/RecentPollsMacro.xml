@@ -158,7 +158,8 @@
   #end
   #if($i == 0)
     (% class="polls secondary" %)((($services.localization.render('polls.nofiles'))))
-    #if($hasEdit)
+    #set($spaceReference = $services.model.resolveSpace("XPoll"))
+    #if($services.security.authorization.hasAccess("edit", $spaceReference))
       (% class="polls" %)((([[$services.localization.render('polls.addfiles')&gt;&gt;XPoll.WebHome||queryString="#?driveNode=WebHome"]])))
     #end
   #else
