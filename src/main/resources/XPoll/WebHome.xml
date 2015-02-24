@@ -31,9 +31,9 @@
   'xpoll.livetable.status': 'Status',
   'xpoll.livetable.proposals': 'Proposals',
   'xpoll.livetable.winner': 'Winner',
-  'xpoll.livetable._actions.edit': $msg.get('platform.appwithinminutes.appLiveTableEditEntryActionName'),
-  'xpoll.livetable._actions.delete': $msg.get('platform.appwithinminutes.appLiveTableDeleteEntryActionName'),
-  'xpoll.livetable._actions': $msg.get('platform.appwithinminutes.liveTableEditorActionsColumnName')
+  'xpoll.livetable._actions.edit': $services.localization.render('platform.appwithinminutes.appLiveTableEditEntryActionName'),
+  'xpoll.livetable._actions.delete': $services.localization.render('platform.appwithinminutes.appLiveTableDeleteEntryActionName'),
+  'xpoll.livetable._actions': $services.localization.render('platform.appwithinminutes.liveTableEditorActionsColumnName')
 }))
 #set($columnsProperties = {
   'name': {'type': 'text', 'link' : 'view', 'size': 10, 'filterable': true, 'sortable': true, 'html': false},
