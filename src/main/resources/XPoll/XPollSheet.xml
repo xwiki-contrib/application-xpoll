@@ -23,13 +23,13 @@
 #set($ok = $xwiki.jsx.use("XPoll.XPollJSExtension"))
 #set($ok = $xwiki.ssx.use("XPoll.XPollSheet"))
 
-#if($hasEdit &amp;&amp; $context.action=='view' &amp;&amp; $doc.getValue('status')=='inpreparation')
+#if($hasEdit &amp;&amp; $xcontext.action=='view' &amp;&amp; $doc.getValue('status')=='inpreparation')
   $services.localization.render("contrib.xpoll.preparation.hasRight")
 #elseif(!$hasEdit)
   $services.localization.render("contrib.xpoll.preparation.noRight")
 #end
 
-#if($context.action=="edit" || $doc.getValue("status")=="inpreparation")
+#if($xcontext.action=="edit" || $doc.getValue("status")=="inpreparation")
 
 #*
  Displays the value of the name property as the title of the document. If value is empty (e.g. creation step), displays the document name.
@@ -87,15 +87,15 @@ $doc.display('description')
 #foreach($obj in $doc.getObjects("XPoll.XPollVoteClass"))
  #set($ok = $doc.use($obj))
  #set($user = $doc.getValue("user"))
- #if($user==$context.user)
+ #if($user==$xcontext.user)
   #set($foundUser = true)
  #end
  #set($votes = $doc.getValue("votes"))
-|= {{html clean="false"}}$xwiki.getUserName($user){{/html}} #foreach($proposal in $proposals) #set($checked = $votes.contains($proposal)) #if($checked) #set($nbvotes = $voteCount.get($proposal)) #set($nbvotes = $nbvotes + 1) #set($ok = $voteCount.put($proposal, $nbvotes)) #end | {{html clean=="false"}}&lt;input type="checkbox" name="${proposal.hashCode()}" #if($checked)CHECKED#end #if($context.user!=$user) disabled #end /&gt;{{/html}} #end  #if($user==$context.user) |(% style="border: none;" %) {{html clean=false}}&lt;input type="submit" value="$services.localization.render("contrib.xpoll.vote.user.submit")" class="button" onclick="xpollSave(this.form); return false;" /&gt;{{/html}} #end
+|= {{html clean="false"}}$xwiki.getUserName($user){{/html}} #foreach($proposal in $proposals) #set($checked = $votes.contains($proposal)) #if($checked) #set($nbvotes = $voteCount.get($proposal)) #set($nbvotes = $nbvotes + 1) #set($ok = $voteCount.put($proposal, $nbvotes)) #end | {{html clean=="false"}}&lt;input type="checkbox" name="${proposal.hashCode()}" #if($checked)CHECKED#end #if($xcontext.user!=$user) disabled #end /&gt;{{/html}} #end  #if($user==$xcontext.user) |(% style="border: none;" %) {{html clean=false}}&lt;input type="submit" value="$services.localization.render("contrib.xpoll.vote.user.submit")" class="button" onclick="xpollSave(this.form); return false;" /&gt;{{/html}} #end
 
 #end
-#if(!$foundUser &amp;&amp; $context.user!="XWiki.XWikiGuest")
-|= {{html clean="false"}}$xwiki.getUserName($context.user){{/html}} #foreach($proposal in $proposals) #set($checked = false) | {{html clean=="false"}}&lt;input type="checkbox" name="${proposal.hashCode()}" #if($checked)CHECKED#end /&gt;{{/html}} #end |(% style="border: none;" %) {{html clean=false}}&lt;input type="submit" value="$services.localization.render("contrib.xpoll.vote.user.submit")" class="button" onclick="xpollSave(this.form); return false;" /&gt;{{/html}} 
+#if(!$foundUser &amp;&amp; $xcontext.user!="XWiki.XWikiGuest")
+|= {{html clean="false"}}$xwiki.getUserName($xcontext.user){{/html}} #foreach($proposal in $proposals) #set($checked = false) | {{html clean=="false"}}&lt;input type="checkbox" name="${proposal.hashCode()}" #if($checked)CHECKED#end /&gt;{{/html}} #end |(% style="border: none;" %) {{html clean=false}}&lt;input type="submit" value="$services.localization.render("contrib.xpoll.vote.user.submit")" class="button" onclick="xpollSave(this.form); return false;" /&gt;{{/html}} 
 #end
 |= $services.localization.render("contrib.xpoll.numberVotes") #foreach($proposal in $proposals)|= $!voteCount.get($proposal) #end
 
@@ -117,7 +117,7 @@ $services.localization.render("contrib.xpoll.finish.message")
  #set($ok = $doc.use($obj))
  #set($user = $doc.getValue("user"))
  #set($votes = $doc.getValue("votes"))
-|= {{html clean="false"}}$xwiki.getUserName($user) {{/html}} #foreach($proposal in $proposals) #set($checked = $votes.contains($proposal)) #if($checked) #set($nbvotes = $voteCount.get($proposal)) #set($nbvotes = $nbvotes + 1) #set($ok = $voteCount.put($proposal, $nbvotes)) #end | #if$($context.action=="export") #if($checked) X #end #else {{html clean=="false"}}&lt;input type="checkbox" name="$proposal" #if($checked)CHECKED#end disabled /&gt;{{/html}} #end #end
+|= {{html clean="false"}}$xwiki.getUserName($user) {{/html}} #foreach($proposal in $proposals) #set($checked = $votes.contains($proposal)) #if($checked) #set($nbvotes = $voteCount.get($proposal)) #set($nbvotes = $nbvotes + 1) #set($ok = $voteCount.put($proposal, $nbvotes)) #end | #if$($xcontext.action=="export") #if($checked) X #end #else {{html clean=="false"}}&lt;input type="checkbox" name="$proposal" #if($checked)CHECKED#end disabled /&gt;{{/html}} #end #end
 
 #end
 |= $services.localization.render("contrib.xpoll.numberVotes") #foreach($proposal in $proposals)|= $voteCount.get($proposal) #end
