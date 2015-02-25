@@ -7,7 +7,7 @@
   <defaultLanguage/>
   <translation>1</translation>
   <creator>xwiki:XWiki.Admin</creator>
-  <parent>AppWithinMinutes.WebHome</parent>
+  <parent>XPoll.WebHome</parent>
   <author>xwiki:XWiki.Admin</author>
   <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
   <creationDate>1386247558000</creationDate>
