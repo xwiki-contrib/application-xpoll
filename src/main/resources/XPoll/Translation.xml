@@ -66,7 +66,11 @@ polls.addfiles=Add poll
 polls.seeallfiles=See all polls
 
 # Recent ideas macro
-polls.recentpolls.title=Recent Polls</content>
+polls.recentpolls.title=Recent Polls
+rendering.macro.pollsrecent.name=Recent Polls
+rendering.macro.pollsrecent.description=Displays the N most recent polls.
+rendering.macro.pollsrecent.parameter.limit.name=Limit
+rendering.macro.pollsrecent.parameter.limit.description=Number of maximum entries.</content>
   <object>
     <name>XPoll.Translation</name>
     <number>0</number>
@@ -91,7 +95,7 @@ polls.recentpolls.title=Recent Polls</content>
         <prettyName>Scope</prettyName>
         <relationalStorage>0</relationalStorage>
         <separator> </separator>
-        <separators> ,|</separators>
+        <separators>|, </separators>
         <size>1</size>
         <unmodifiable>0</unmodifiable>
         <values>GLOBAL|WIKI|USER|ON_DEMAND</values>
