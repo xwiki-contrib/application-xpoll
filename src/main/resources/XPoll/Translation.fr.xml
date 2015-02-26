@@ -4,7 +4,7 @@
   <web>XPoll</web>
   <name>Translation</name>
   <language>fr</language>
-  <defaultLanguage>en</defaultLanguage>
+  <defaultLanguage/>
   <translation>1</translation>
   <creator>xwiki:XWiki.Admin</creator>
   <parent>XPoll.WebHome</parent>
