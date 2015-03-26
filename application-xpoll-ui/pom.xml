@@ -23,17 +23,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>org.xwiki.commons</groupId>
-    <artifactId>xwiki-commons-pom</artifactId>
-    <version>5.4.1</version>
+    <groupId>org.xwiki.contrib</groupId>
+    <artifactId>application-xpoll</artifactId>
+    <version>1.6.4-SNAPSHOT</version>
   </parent>
-  <groupId>org.xwiki.contrib</groupId>
-  <artifactId>application-xpoll</artifactId>
-  <version>1.6.4-SNAPSHOT</version>
-  <packaging>pom</packaging>
-  <name>XPoll Application</name>
+  <artifactId>application-xpoll-ui</artifactId>
+  <packaging>xar</packaging>
+  <name>XPoll Application - UI</name>
   <description>XWiki Simple Poll Application - Doodle like</description>
-   <developers>
+  <developers>
     <developer>
       <id>ldubost</id>
       <name>Ludovic Dubost</name>
@@ -47,12 +45,6 @@
     <name>XWiki SAS</name>
     <url>http://xwiki.com</url>
   </organization>
-  <properties>
-    <platform.version>${commons.version}</platform.version>
-    <rendering.version>${commons.version}</rendering.version>
-    <!-- Name to display by the Extension Manager -->
-    <xwiki.extension.name>XPoll Application</xwiki.extension.name>
-  </properties>
   <scm>
    <connection>scm:git:git://github.com/xwiki-contrib/application-xpoll.git</connection>
    <developerConnection>scm:git:git@github.com:xwiki-contrib/application-xpoll.git</developerConnection>
@@ -66,15 +58,49 @@
      <url>http://nexus.xwiki.org/nexus/service/local/staging/deploy/maven2/</url>
    </repository>
  </distributionManagement>
-  <modules>
-    <module>application-xpoll-ui</module>
-  </modules>
-  <profiles>
-    <profile>
-      <id>integration-tests</id>
-      <modules>
-        <module>application-xpoll-test</module>
-      </modules>
-    </profile>
-  </profiles>
+ <properties>
+    <!-- Don't run CLIRR here since there's no Java code. -->
+    <xwiki.clirr.skip>true</xwiki.clirr.skip>
+    <xwiki.extension.features>org.xwiki.contrib:application-xpoll</xwiki.extension.features>
+  </properties>
+  <dependencies>
+  <dependency>
+      <groupId>org.xwiki.platform</groupId>
+      <artifactId>xwiki-platform-livetable-ui</artifactId>
+      <version>${platform.version}</version>
+      <type>xar</type>
+      <scope>runtime</scope>
+    </dependency>
+      <dependency>
+      <groupId>org.xwiki.platform</groupId>
+      <artifactId>xwiki-platform-sheet-ui</artifactId>
+      <version>${platform.version}</version>
+      <type>xar</type>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.xwiki.platform</groupId>
+      <artifactId>xwiki-platform-uiextension-ui</artifactId>
+      <version>${platform.version}</version>
+      <type>xar</type>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.xwiki.platform</groupId>
+      <artifactId>xwiki-platform-appwithinminutes-ui</artifactId>
+      <version>${platform.version}</version>
+      <type>xar</type>
+      <scope>runtime</scope>
+    </dependency>
+  </dependencies>
+  <build>
+    <!-- Needed to add support for the XAR packaging -->
+    <extensions>
+      <extension>
+        <groupId>org.xwiki.commons</groupId>
+        <artifactId>xwiki-commons-tool-xar-handlers</artifactId>
+        <version>5.4.1</version>
+      </extension>
+    </extensions>
+  </build>
 </project>
