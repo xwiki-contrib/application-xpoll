@@ -11,6 +11,7 @@ import org.xwiki.test.ui.AbstractTest;
 import org.xwiki.test.ui.SuperAdminAuthenticationRule;
 import org.xwiki.test.ui.po.ViewPage;
 import org.xwiki.xpoll.test.po.ActiveStatusViewPage;
+import org.xwiki.xpoll.test.po.FinishedStatusViewPage;
 import org.xwiki.xpoll.test.po.InPreparationStatusViewPage;
 import org.xwiki.xpoll.test.po.XPollEditPage;
 import org.xwiki.xpoll.test.po.XPollHomePage;
@@ -82,7 +83,29 @@ public class XPollTest extends AbstractTest
         Assert.assertEquals(pollDescription, activeStatusViewPage.getDescription());
 
         activeStatusViewPage.getProposals();
-        Assert.assertEquals(proposals, activeStatusViewPage.pollProposals);
+        Assert.assertEquals(this.proposals, activeStatusViewPage.pollProposals);
 
+    }
+
+    @Test
+    public void createNewEntryWithFinishedStatus()
+    {
+        XPollHomePage xpollHomePage = XPollHomePage.gotoPage();
+        xpollHomePage.clickAddNewEntryButton();
+        xpollHomePage.setAddPollEntryInput(pollName);
+
+        XPollEditPage xpollEditPage = xpollHomePage.clickAddPollEntryButton();
+        Assert.assertEquals(pollName, xpollEditPage.getName());
+        xpollEditPage.setDescription(pollDescription);
+        xpollEditPage.setStatusFinished();
+        xpollEditPage.setProposals(pollProposals);
+        xpollEditPage.clickSaveAndView();
+
+        FinishedStatusViewPage finishedStatusViewPage = new FinishedStatusViewPage();
+        Assert.assertEquals(pollName, finishedStatusViewPage.getDocumentTitle());
+        Assert.assertEquals(pollDescription, finishedStatusViewPage.getDescription());
+
+        finishedStatusViewPage.getProposals();
+        Assert.assertEquals(this.proposals, finishedStatusViewPage.pollProposals);
     }
 }
