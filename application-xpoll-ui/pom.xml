@@ -54,6 +54,7 @@
 		<!-- Don't run CLIRR here since there's no Java code. -->
 		<xwiki.clirr.skip>true</xwiki.clirr.skip>
 		<xwiki.extension.features>org.xwiki.contrib:application-xpoll</xwiki.extension.features>
+		<xwiki.extension.name>XPoll Application</xwiki.extension.name>
 	</properties>
 	<dependencies>
 		<dependency>
