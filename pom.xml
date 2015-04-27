@@ -52,8 +52,6 @@
   <properties>
     <platform.version>${commons.version}</platform.version>
     <rendering.version>${commons.version}</rendering.version>
-    <!-- Name to display by the Extension Manager -->
-    <xwiki.extension.name>XPoll Application</xwiki.extension.name>
   </properties>
   <scm>
     <connection>scm:git:git://github.com/xwiki-contrib/application-xpoll.git</connection>
