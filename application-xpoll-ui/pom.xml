@@ -92,7 +92,7 @@
 			<extension>
 				<groupId>org.xwiki.commons</groupId>
 				<artifactId>xwiki-commons-tool-xar-handlers</artifactId>
-				<version>5.4.1</version>
+				<version>${commons.version}</version>
 			</extension>
 		</extensions>
 	</build>
