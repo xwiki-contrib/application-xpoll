@@ -78,5 +78,6 @@ xpoll.livetable._actions=Actions
 xpoll.livetable.name=Nom
 xpoll.livetable.status=Statut
 xpoll.livetable.winner=Résultat
+xpoll.livetable.emptyvalue=-
 </content>
 </xwikidoc>

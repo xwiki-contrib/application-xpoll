@@ -39,22 +39,7 @@
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.0</syntaxId>
   <hidden>false</hidden>
-  <content>{{display reference="AppWithinMinutes.DynamicMessageTool" /}}
-
-{{velocity}}
-#set($originalMsg = $msg)
-#set($msg = $services.dynamicMessageToolFactory.createDynamicMessageTool($msg, {
-  'xpoll.livetable.name': 'Name',
-  'XPoll.XPollClass_status_inpreparation': 'In Preparation',
-  'XPoll.XPollClass_status_active': 'Active',
-  'XPoll.XPollClass_status_finished': 'Finished',
-  'xpoll.livetable.status': 'Status',
-  'xpoll.livetable.proposals': 'Proposals',
-  'xpoll.livetable.winner': 'Winner',
-  'xpoll.livetable._actions.edit': $services.localization.render('platform.appwithinminutes.appLiveTableEditEntryActionName'),
-  'xpoll.livetable._actions.delete': $services.localization.render('platform.appwithinminutes.appLiveTableDeleteEntryActionName'),
-  'xpoll.livetable._actions': $services.localization.render('platform.appwithinminutes.liveTableEditorActionsColumnName')
-}))
+  <content>{{velocity}}
 #set($columnsProperties = {
   'name': {'type': 'text', 'link' : 'view', 'size': 10, 'filterable': true, 'sortable': true, 'html': false},
   'status': {'type': 'list', 'size': 10, 'filterable': true, 'sortable': true, 'html': false},
@@ -63,7 +48,6 @@
 })
 #set($options = {
   'className': 'XPoll.XPollClass',
-  'resultPage' : 'AppWithinMinutes.LiveTableGenerator',
   'translationPrefix': 'xpoll.livetable.',
   'tagCloud': true,
   'rowCount': 15,
@@ -73,7 +57,6 @@
 })
 #set($columns = ['name', 'status', 'winner', '_actions'])
 #livetable('xpoll' $columns $columnsProperties $options)
-#set($msg = $originalMsg)
 {{/velocity}}</content>
   <object>
     <name>XPoll.WebHome</name>

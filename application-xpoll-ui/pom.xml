@@ -101,13 +101,6 @@
       <version>${platform.version}</version>
       <scope>runtime</scope>
     </dependency>
-    <!-- Remove when we upgrade to XWiki 7.1-M1+ -->
-    <dependency>
-      <groupId>org.xwiki.platform</groupId>
-      <artifactId>xwiki-platform-component-script</artifactId>
-      <version>${platform.version}</version>
-      <scope>runtime</scope>
-    </dependency>
   </dependencies>
   <build>
     <!-- Needed to add support for the XAR packaging -->

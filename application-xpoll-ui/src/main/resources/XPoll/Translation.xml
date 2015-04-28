@@ -60,6 +60,7 @@ xpoll.livetable.name=Name
 xpoll.livetable.status=Status
 xpoll.livetable.winner=Winner
 xpoll.livetable._actions=Actions
+xpoll.livetable.emptyvalue=-
 
 contrib.xpoll.preparation.hasRight=This xpoll is currently in preparation, click "edit" to modify it and activate it.
 contrib.xpoll.preparation.noRight=This xpoll is currently in preparation, you do not have the rights to modify it.
