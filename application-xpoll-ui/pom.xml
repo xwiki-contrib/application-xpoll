@@ -27,7 +27,7 @@
   <parent>
     <groupId>org.xwiki.contrib</groupId>
     <artifactId>application-xpoll</artifactId>
-    <version>1.6.4-SNAPSHOT</version>
+    <version>1.6.4</version>
   </parent>
   <artifactId>application-xpoll-ui</artifactId>
   <packaging>xar</packaging>
@@ -51,7 +51,7 @@
     <connection>scm:git:git://github.com/xwiki-contrib/application-xpoll.git</connection>
     <developerConnection>scm:git:git@github.com:xwiki-contrib/application-xpoll.git</developerConnection>
     <url>https://github.com/xwiki-contrib/application-xpoll.git</url>
-    <tag>HEAD</tag>
+    <tag>application-xpoll-1.6.4</tag>
   </scm>
   <distributionManagement>
     <repository>
