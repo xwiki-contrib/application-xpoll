@@ -56,7 +56,7 @@
   <scm>
     <connection>scm:git:git://github.com/xwiki-contrib/application-xpoll.git</connection>
     <developerConnection>scm:git:git@github.com:xwiki-contrib/application-xpoll.git</developerConnection>
-    <url>https://github.com/xwiki-contrib/application-xpoll.git</url>
+    <url>https://github.com/xwiki-contrib/application-xpoll/tree/master</url>
     <tag>HEAD</tag>
   </scm>
   <distributionManagement>
