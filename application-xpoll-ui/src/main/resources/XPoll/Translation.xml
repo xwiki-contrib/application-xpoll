@@ -124,7 +124,7 @@ rendering.macro.pollsrecent.parameter.limit.description=Number of maximum entrie
       </scope>
     </class>
     <property>
-      <scope>GLOBAL</scope>
+      <scope>WIKI</scope>
     </property>
   </object>
 </xwikidoc>
