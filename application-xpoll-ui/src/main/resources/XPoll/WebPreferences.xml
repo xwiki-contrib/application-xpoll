@@ -28,7 +28,7 @@
   <translation>0</translation>
   <creator>xwiki:XWiki.Admin</creator>
   <creationDate>1325372400000</creationDate>
-  <parent>xwiki:Doodle.WebHome</parent>
+  <parent>XPoll.WebHome</parent>
   <author>xwiki:XWiki.Admin</author>
   <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
   <date>1457680316000</date>
@@ -1179,7 +1179,7 @@
         <prettyName>Time Zone</prettyName>
         <size>30</size>
         <unmodifiable>0</unmodifiable>
-        <classType>com.xpn.xwiki.objects.classes.TimezoneClass</classType>
+        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </timezone>
       <title>
         <customDisplay/>
