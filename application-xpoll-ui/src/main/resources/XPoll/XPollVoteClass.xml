@@ -20,29 +20,32 @@
  * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
 -->
 
-<xwikidoc>
+<xwikidoc version="1.2" reference="XPoll.XPollVoteClass" locale="">
   <web>XPoll</web>
   <name>XPollVoteClass</name>
   <language/>
   <defaultLanguage/>
   <translation>0</translation>
-  <parent>XWiki.XWikiClasses</parent>
   <creator>xwiki:XWiki.Admin</creator>
+  <parent>XWiki.XWikiClasses</parent>
   <author>xwiki:XWiki.Admin</author>
-  <customClass/>
   <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
   <creationDate>1325372400000</creationDate>
   <date>1325372400000</date>
   <contentUpdateDate>1325372400000</contentUpdateDate>
   <version>1.1</version>
   <title>DoodleVote Class</title>
-  <template/>
-  <defaultTemplate/>
-  <validationScript/>
   <comment/>
   <minorEdit>false</minorEdit>
-  <syntaxId>xwiki/2.0</syntaxId>
+  <syntaxId>xwiki/2.1</syntaxId>
   <hidden>true</hidden>
+  <content>{{velocity}}
+## Replace Main with the Space where you want your documents to be created.
+## Replace the default parent with the one of your choice and save the document.
+##
+#set($defaultParent = $doc.fullName)
+#set($defaultSpace = 'Main')
+{{/velocity}}</content>
   <class>
     <name>XPoll.XPollVoteClass</name>
     <customClass/>
@@ -88,6 +91,10 @@
     </votes>
   </class>
   <object>
+    <name>XPoll.XPollVoteClass</name>
+    <number>0</number>
+    <className>XWiki.DocumentSheetBinding</className>
+    <guid>27ad6295-2b8b-42ca-a028-6dc4f3535a44</guid>
     <class>
       <name>XWiki.DocumentSheetBinding</name>
       <customClass/>
@@ -111,19 +118,8 @@
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </sheet>
     </class>
-    <name>XPoll.XPollVoteClass</name>
-    <number>0</number>
-    <className>XWiki.DocumentSheetBinding</className>
-    <guid>27ad6295-2b8b-42ca-a028-6dc4f3535a44</guid>
     <property>
       <sheet>XWiki.ClassSheet</sheet>
     </property>
   </object>
-  <content>{{velocity}}
-## Replace Main with the Space where you want your documents to be created.
-## Replace the default parent with the one of your choice and save the document.
-##
-#set($defaultParent = $doc.fullName)
-#set($defaultSpace = 'Main')
-{{/velocity}}</content>
 </xwikidoc>

@@ -36,13 +36,11 @@
   <contentUpdateDate>1325372400000</contentUpdateDate>
   <version>1.1</version>
   <title>XPoll Class</title>
-  <template/>
-  <defaultTemplate/>
-  <validationScript/>
   <comment/>
   <minorEdit>false</minorEdit>
-  <syntaxId>xwiki/2.0</syntaxId>
+  <syntaxId>xwiki/2.1</syntaxId>
   <hidden>true</hidden>
+  <content/>
   <class>
     <name>XPoll.XPollClass</name>
     <customClass/>
@@ -137,6 +135,10 @@
     </winner>
   </class>
   <object>
+    <name>XPoll.XPollClass</name>
+    <number>0</number>
+    <className>XWiki.ClassSheetBinding</className>
+    <guid>3cb2a30b-1110-4b37-819c-2b1a0bbd9502</guid>
     <class>
       <name>XWiki.ClassSheetBinding</name>
       <customClass/>
@@ -160,15 +162,15 @@
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </sheet>
     </class>
-    <name>XPoll.XPollClass</name>
-    <number>0</number>
-    <className>XWiki.ClassSheetBinding</className>
-    <guid>3cb2a30b-1110-4b37-819c-2b1a0bbd9502</guid>
     <property>
       <sheet>XPollSheet</sheet>
     </property>
   </object>
   <object>
+    <name>XPoll.XPollClass</name>
+    <number>0</number>
+    <className>XWiki.DocumentSheetBinding</className>
+    <guid>b28372f3-8ab3-445d-98f9-71a2db36f75a</guid>
     <class>
       <name>XWiki.DocumentSheetBinding</name>
       <customClass/>
@@ -192,15 +194,15 @@
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </sheet>
     </class>
-    <name>XPoll.XPollClass</name>
-    <number>0</number>
-    <className>XWiki.DocumentSheetBinding</className>
-    <guid>b28372f3-8ab3-445d-98f9-71a2db36f75a</guid>
     <property>
       <sheet>AppWithinMinutes.ClassEditSheet</sheet>
     </property>
   </object>
   <object>
+    <name>XPoll.XPollClass</name>
+    <number>1</number>
+    <className>XWiki.DocumentSheetBinding</className>
+    <guid>7669f1a0-e6d0-4c8f-a62f-03d4e2f75366</guid>
     <class>
       <name>XWiki.DocumentSheetBinding</name>
       <customClass/>
@@ -224,13 +226,8 @@
         <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
       </sheet>
     </class>
-    <name>XPoll.XPollClass</name>
-    <number>1</number>
-    <className>XWiki.DocumentSheetBinding</className>
-    <guid>7669f1a0-e6d0-4c8f-a62f-03d4e2f75366</guid>
     <property>
       <sheet>XWiki.ClassSheet</sheet>
     </property>
   </object>
-  <content/>
 </xwikidoc>

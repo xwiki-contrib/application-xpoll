@@ -26,9 +26,9 @@
   <language/>
   <defaultLanguage/>
   <translation>0</translation>
-  <parent>XPollCode.WebHome</parent>
   <creator>xwiki:XWiki.Admin</creator>
   <creationDate>1457679189000</creationDate>
+  <parent>XPollCode.WebHome</parent>
   <author>xwiki:XWiki.Admin</author>
   <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
   <date>1457680333000</date>
@@ -124,7 +124,7 @@
     <property>
       <content>{{velocity}}
 #panelheader($services.localization.render('polls.recentpolls.title'))
-  {{pollsrecent /}}
+  {{pollsrecent limit='5' /}}
 #panelfooter()
 {{/velocity}}</content>
     </property>

@@ -156,34 +156,31 @@
     </class>
     <property>
       <code>{{velocity}}
+#set($limit = $xcontext.macro.params.limit)
+#if (!$limit)
+  #set($limit = 5)
+#end
 #set($discard = $doc.use('XPoll.XPollClass'))
 #set($discard = $xwiki.ssx.use('XPoll.XPollSheet'))
 ##
-#set($hql = ", BaseObject obj where doc.fullName=obj.name and obj.className='XPoll.XPollClass' and doc.name!='XPollTemplate' order by doc.creationDate desc")
-#set($results = $services.query.hql($hql).execute())
-#set($i = 0)
-#set ($obj = $document.getObject('XPoll.XPollClass'))
+#set($query = "from doc.object(XPoll.XPollClass) as poll where doc.fullName&lt;&gt;'XPoll.XPollTemplate' order by doc.creationDate desc")
+#set($results = $services.query.xwql($query).setLimit($limit).execute())
 ##
-  (% class="polls-recent" %)
-  (((
-  #foreach($item in $results)
-    #set($document = $xwiki.getDocument($item))
-    #if($document.hasAccessLevel('view', $xcontext.user) == 'true')
-      (% class="polls secondary" %)((([[$document.getDisplayTitle()&gt;&gt;$item]] $services.localization.render('polls.author', ["[[$xwiki.getUserName($document.author, false)&gt;&gt;$document.author]]"]) $services.localization.render('polls.date', [$xwiki.formatDate($document.date, 'dd/MM/yyyy hh:mm')]))))
-      #set($i = $i + 1)
-      #if($i == $xcontext.macro.params.limit)
-        #break
-      #end
+(% class="polls-recent" %)
+  #foreach($result in $results)
+    #set($pollDoc = $xwiki.getDocument($result))
+    #if($pollDoc.hasAccessLevel('view', $xcontext.user) == 'true')
+      (% class="polls secondary" %) [[$pollDoc.getDisplayTitle()&gt;&gt;$result]] $services.localization.render('polls.author', ["[[$xwiki.getUserName($pollDoc.author, false)&gt;&gt;$pollDoc.author]]"]) $services.localization.render('polls.date', [$xwiki.formatDate($pollDoc.creationDate)])
     #end
   #end
-  #if($i == 0)
-    (% class="polls secondary" %)((($services.localization.render('polls.nofiles'))))
-    #set($spaceReference = $services.model.resolveSpace("XPoll"))
-    #if($services.security.authorization.hasAccess("edit", $spaceReference))
-      (% class="polls" %)((([[$services.localization.render('polls.addfiles')&gt;&gt;XPoll.WebHome||queryString="#?driveNode=WebHome"]])))
+  #if($results.size() == 0)
+    (% class="polls secondary" %) $services.localization.render('polls.nofiles')
+    #set($spaceReference = $services.model.resolveSpace('XPoll'))
+    #if($services.security.authorization.hasAccess('edit', $spaceReference))
+      (% class="polls" %) [[$services.localization.render('polls.addfiles')&gt;&gt;XPoll.WebHome]]
     #end
   #else
-    (% class="polls" %)((([[$services.localization.render('polls.seeallfiles')&gt;&gt;XPoll.WebHome||queryString="#?driveNode=%2FallFiles"]])))
+    (% class="polls" %) [[$services.localization.render('polls.seeallfiles')&gt;&gt;XPoll.WebHome]]
   #end
 {{/velocity}}</code>
     </property>
