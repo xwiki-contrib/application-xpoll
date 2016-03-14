@@ -34,7 +34,7 @@
   <date>1386247558000</date>
   <contentUpdateDate>1386247558000</contentUpdateDate>
   <version>1.1</version>
-  <title/>
+  <title>Translation</title>
   <comment/>
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
@@ -43,31 +43,31 @@
 XPoll.XPollClass_description=Description
 XPoll.XPollClass_name=Titre
 XPoll.XPollClass_proposals=Propositions
-XPoll.XPollClass_proposals_hint=(Liste d'éléments séparés par des virgules ou des barres verticales)
+XPoll.XPollClass_proposals_hint=(Liste d'éléments séparés par une virgule ou une barre verticale)
 XPoll.XPollClass_status=Statut
 XPoll.XPollClass_status_active=Actif
 XPoll.XPollClass_status_finished=Terminé
 XPoll.XPollClass_status_inpreparation=En cours de préparation
-contrib.xpoll.WebHome.description=Bienvenue sur la page de l'application Sondage. Vous pouvez créer un sondage en fonction de vos besoins.
+contrib.xpoll.WebHome.description=Bienvenue sur l'application Sondage. Vous pouvez créer un sondage en fonction de vos besoins.
 contrib.xpoll.WebHome.name=Nom
 contrib.xpoll.WebHome.status=Statut
-contrib.xpoll.WebHome.winner=Résultat 
+contrib.xpoll.WebHome.winner=Résultat
 contrib.xpoll.app.title=Sondage
-contrib.xpoll.finish.message=Le vote est terminé. Voici les résultats\:
-contrib.xpoll.home.title=Sondage
+contrib.xpoll.finish.message=Le vote est terminé. Voici les résultats \:
+contrib.xpoll.home.title=Sondages
 contrib.xpoll.numberVotes=Nombre de votes
-contrib.xpoll.preparation.hasRight=Ce sondage est actuellement en préparation, cliquez sur "editer" pour le modifier et l'activer.
+contrib.xpoll.preparation.hasRight=Ce sondage est actuellement en préparation, cliquez sur "éditer" pour le modifier et l'activer.
 contrib.xpoll.preparation.noRight=Ce sondage est actuellement en préparation, vous n'avez pas le droit de le modifier.
 contrib.xpoll.status.active=Actif
 contrib.xpoll.status.finished=Terminé
 contrib.xpoll.status.inPreparation=En cours de préparation
 contrib.xpoll.user=Utilisateur
-contrib.xpoll.vote.guest.submit=Sauver
-contrib.xpoll.vote.user.submit=Sauver
-polls.addfiles=Ajouter des sondages
+contrib.xpoll.vote.guest.submit=Sauvegarder
+contrib.xpoll.vote.user.submit=Sauvegarder
+polls.addfiles=Ajouter un sondage
 polls.author=par {0}
 polls.date=le {0}
-polls.nofiles=Il ya pas encore de sondages
+polls.nofiles=Il n'y a pas encore de sondage
 polls.recentpolls.title=Sondages récents
 polls.seeallfiles=Voir tous les sondages
 rendering.macro.pollsrecent.description=Affiche les N plus récents sondages.
@@ -77,7 +77,6 @@ rendering.macro.pollsrecent.parameter.limit.name=Limite
 xpoll.livetable._actions=Actions
 xpoll.livetable.name=Nom
 xpoll.livetable.status=Statut
-xpoll.livetable.winner=Résultat
-xpoll.livetable.emptyvalue=-
+xpoll.livetable.winner=Résultat 
 </content>
 </xwikidoc>
