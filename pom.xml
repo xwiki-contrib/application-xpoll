@@ -31,7 +31,7 @@
   </parent>
   <groupId>org.xwiki.contrib</groupId>
   <artifactId>application-xpoll</artifactId>
-  <version>1.6.5</version>
+  <version>1.6.6-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>XPoll Application</name>
   <description>XWiki Simple Poll Application - Doodle like</description>
@@ -57,7 +57,7 @@
     <connection>scm:git:git://github.com/xwiki-contrib/application-xpoll.git</connection>
     <developerConnection>scm:git:git@github.com:xwiki-contrib/application-xpoll.git</developerConnection>
     <url>https://github.com/xwiki-contrib/application-xpoll/tree/master</url>
-    <tag>application-xpoll-1.6.5</tag>
+    <tag>HEAD</tag>
   </scm>
   <distributionManagement>
     <repository>
