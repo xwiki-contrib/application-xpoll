@@ -170,7 +170,7 @@
   #foreach($result in $results)
     #set($pollDoc = $xwiki.getDocument($result))
     #if($pollDoc.hasAccessLevel('view', $xcontext.user) == 'true')
-      (% class="polls secondary" %) [[$pollDoc.name&gt;&gt;$result]] $services.localization.render('polls.author', ["[[$xwiki.getUserName($pollDoc.author, false)&gt;&gt;$pollDoc.author]]"]) $services.localization.render('polls.date', [$xwiki.formatDate($pollDoc.creationDate)])
+      (% class="polls secondary" %) [[$pollDoc.getPlainTitle()&gt;&gt;$result]] $services.localization.render('polls.author', ["[[$xwiki.getUserName($pollDoc.author, false)&gt;&gt;$pollDoc.author]]"]) $services.localization.render('polls.date', [$xwiki.formatDate($pollDoc.creationDate)])
     #end
   #end
   #if($results.size() == 0)
