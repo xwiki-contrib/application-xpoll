@@ -97,7 +97,7 @@
     #set($actionDoc = $xwiki.getDocument('XPoll.XPollService'))
     #set($actionURL = $actionDoc.getURL('get', "xpage=plain&amp;outputSyntax=plain&amp;page=$escapetool.url($doc.fullName)"))
     {{html clean='false' wiki='true'}}
-      &lt;form action="$actionURL" method="post"&gt;
+      &lt;form id="xpollSaveForm" action="$actionURL" method="post"&gt;
         (% class='xpoll' %)
         ## first table row
         |= $services.localization.render('contrib.xpoll.user') #foreach($proposal in $proposals)|= $proposal #end
@@ -123,7 +123,7 @@
           #end ##
           #if($user == $xcontext.user)
             |(% style="border: none;" %)
-            &lt;input type="submit" value="$services.localization.render("contrib.xpoll.vote.user.submit")" class="button" onclick="xpollSave(this.form); return false;" /&gt;##
+            &lt;input type="submit" value="$services.localization.render("contrib.xpoll.vote.user.submit")" class="button" /&gt;##
           #end 
 
         #end
@@ -134,7 +134,7 @@
           | &lt;input type="checkbox" name="${proposal.hashCode()}" #if($checked)CHECKED#end /&gt; 
         #end ##
         |(% style="border: none;" %)
-        &lt;input type="submit" value="$services.localization.render("contrib.xpoll.vote.user.submit")" class="button" onclick="xpollSave(this.form); return false;" /&gt; 
+        &lt;input type="submit" value="$services.localization.render("contrib.xpoll.vote.user.submit")" class="button" /&gt; 
       #end
       ## third table row
       |= $services.localization.render('contrib.xpoll.numberVotes') #foreach($proposal in $proposals)|= $!voteCount.get($proposal) #end
