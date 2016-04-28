@@ -48,7 +48,7 @@
   #if("$!pollObj.getProperty('name').value" != '')
     $doc.display('name')
   #else
-    {{html}}&lt;input id="XPoll.XPollClass_${pollObj.number}_name" type="text" value="$doc.name" size="30" name="XPoll.XPollClass_${pollObj.number}_name"&gt;&lt;/input&gt;{{/html}}
+    {{html}}&lt;input id="XPoll.XPollClass_${pollObj.number}_name" type="text" value="$escapetool.xml($doc.name)" size="30" name="XPoll.XPollClass_${pollObj.number}_name"&gt;&lt;/input&gt;{{/html}}
   #end
 #end
 
