@@ -133,7 +133,7 @@
         beforeSend: function() {
           this.progressNotification = new XWiki.widgets.Notification("$services.localization.render('contrib.xpoll.vote.saving')", 'inprogress');
           // disable Save button
-          submitInput.attr('disabled', 'disabled');
+          submitInput.prop('disabled', true);
         },
         complete:function() {
           // disable inprogress notification widget
@@ -145,7 +145,7 @@
         error: function(data) {
           new XWiki.widgets.Notification("$services.localization.render('contrib.xpoll.vote.failed', 'HTTP Error')", 'error');
           // enable Save button
-          submitInput.removeAttr('disabled');
+          submitInput.prop('disabled', false);
         }
       });
     });
