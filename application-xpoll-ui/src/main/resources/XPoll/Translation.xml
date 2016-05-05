@@ -72,6 +72,9 @@ contrib.xpoll.user=User
 
 contrib.xpoll.vote.guest.submit=Save
 contrib.xpoll.vote.user.submit=Save
+contrib.xpoll.vote.saving=Saving...
+contrib.xpoll.vote.saved=Saved
+contrib.xpoll.vote.failed=Failed to save the document. Reason: {0}
 
 XPoll.XPollClass_name=Name
 XPoll.XPollClass_description=Description
@@ -86,7 +89,7 @@ polls.nofiles=There are no polls yet
 polls.addfiles=Add poll
 polls.seeallfiles=See all polls
 
-# Recent ideas macro
+# Recent polls macro
 polls.recentpolls.title=Recent Polls
 rendering.macro.pollsrecent.name=Recent Polls
 rendering.macro.pollsrecent.description=Displays the N most recent polls.

@@ -120,40 +120,43 @@
       <cache>long</cache>
     </property>
     <property>
-      <code>function xpollSave(form) {
-  var savingBox = new XWiki.widgets.Notification('Saving...', 'inprogress', {inactive: true});
-  var savedBox = new XWiki.widgets.Notification('Saved', 'done', {inactive: true});
-  var failedBox = new XWiki.widgets.Notification('Failed to save the document. Reason: &lt;span id=\'ajaxRequestFailureReason\'&gt;&lt;/span&gt;', 'error', {inactive: true});
-
-  savedBox.hide(); 
-  failedBox.hide();
-  savingBox.show();
-
-  form.request({
-    onFailure: function() {
-      savingBox.hide();
-      failedBox.show();
-      $('ajaxRequestFailureReason').update('HTTP Error');
-    },
-    onSuccess: function(t) {
-      if (t.responseText.indexOf('OK ') == 0) {
-        savingBox.hide();
-        savedBox.show();
-        window.location.reload(true);
-      } else {
-        savingBox.hide();
-        failedBox.show();
-        $('ajaxRequestFailureReason').update(t.responseText);
-      }
-    }
+      <code>require(['jquery'], function ($) {
+  $(document).ready(function() {
+    var saveForm = $('#xpollSaveForm');
+    var submitInput = saveForm.find("input[type='submit']");
+    saveForm.submit(function(event) {
+      event.preventDefault();
+      $.ajax({
+        type: $(this).attr('method'),
+        url : $(this).attr('action'),
+        data: $(this).serialize(),
+        beforeSend: function() {
+          this.progressNotification = new XWiki.widgets.Notification("$services.localization.render('contrib.xpoll.vote.saving')", 'inprogress');
+          // disable Save button
+          submitInput.prop('disabled', true);
+        },
+        complete:function() {
+          // disable inprogress notification widget
+          this.progressNotification.hide();
+        },
+        success: function(data) {
+          new XWiki.widgets.Notification("$services.localization.render('contrib.xpoll.vote.saved')", 'done');
+        },
+        error: function(data) {
+          new XWiki.widgets.Notification("$services.localization.render('contrib.xpoll.vote.failed', 'HTTP Error')", 'error');
+          // enable Save button
+          submitInput.prop('disabled', false);
+        }
+      });
+    });
   });
-}</code>
+});</code>
     </property>
     <property>
       <name>XPoll JS Extension</name>
     </property>
     <property>
-      <parse/>
+      <parse>1</parse>
     </property>
     <property>
       <use>onDemand</use>
