@@ -20,7 +20,7 @@
  * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
 -->
 
-<xwikidoc version="1.1">
+<xwikidoc version="1.2" reference="XPoll.Translation" locale="">
   <web>XPoll</web>
   <name>Translation</name>
   <language/>
@@ -94,7 +94,11 @@ polls.recentpolls.title=Recent Polls
 rendering.macro.pollsrecent.name=Recent Polls
 rendering.macro.pollsrecent.description=Displays the N most recent polls.
 rendering.macro.pollsrecent.parameter.limit.name=Limit
-rendering.macro.pollsrecent.parameter.limit.description=Number of maximum entries.</content>
+rendering.macro.pollsrecent.parameter.limit.description=Number of maximum entries.
+
+# Template Provider
+templateProvider.xpoll.name=Poll
+templateProvider.xpoll.description=Analyze votes</content>
   <object>
     <name>XPoll.Translation</name>
     <number>0</number>
