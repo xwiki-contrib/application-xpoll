@@ -39,44 +39,65 @@
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>true</hidden>
-  <content>## XWiki Translation for language hu generated from http://www.l10n.xwiki.org
-XPoll.XPollClass_description=Leírás
-XPoll.XPollClass_name=Név
-XPoll.XPollClass_proposals=Javaslatok
-XPoll.XPollClass_proposals_hint=(vesszővel elválasztott lista)
-XPoll.XPollClass_status=Állapot
+  <content>contrib.xpoll.app.title=Szavazások
+  
+contrib.xpoll.home.title=Szavazások
+
+contrib.xpoll.status.active=Aktív
+contrib.xpoll.status.inPreparation=Előkészítés alatt
+contrib.xpoll.status.finished=Befejeződött
+
+XPoll.XPollClass_status_inpreparation=Előkészítés alatt
 XPoll.XPollClass_status_active=Aktív
 XPoll.XPollClass_status_finished=Befejeződött
-XPoll.XPollClass_status_inpreparation=Előkészítés alatt
+
 contrib.xpoll.WebHome.description=Üdvözli Önt az XWiki Poll alkalmazás. Itt tud létrehozni szavazást/közvéleménykutatást.
 contrib.xpoll.WebHome.name=Név
 contrib.xpoll.WebHome.status=Állapot
 contrib.xpoll.WebHome.winner=Győztes
-contrib.xpoll.app.title=Szavazások
-contrib.xpoll.finish.message=A szavazás véget ért, a végeredmény\:
-contrib.xpoll.home.title=Szavazások
-contrib.xpoll.numberVotes=Szavazatok száma
-contrib.xpoll.preparation.hasRight=Az következő xpoll egyelőre nem végleges, a "szerkeszt" gombra kattintva tudja módosítani és aktiválni.
-contrib.xpoll.preparation.noRight=Az következő xpoll egyelőre nem végleges, a "szerkeszt" gombra kattintva tudja módosítani és aktiválni.
-contrib.xpoll.status.active=Aktív
-contrib.xpoll.status.finished=Befejeződött
-contrib.xpoll.status.inPreparation=Előkészítés alatt
-contrib.xpoll.user=Felhasználó
-contrib.xpoll.vote.guest.submit=Mentés
-contrib.xpoll.vote.user.submit=Mentés
-polls.addfiles=Szavazás hozzáadása
-polls.author={0} által
-polls.date=ekkor\: {0}
-polls.nofiles=Jelenleg nincs aktív szavazás
-polls.recentpolls.title=Legutóbbi szavazások
-polls.seeallfiles=Összes szavazás megtekintése
-rendering.macro.pollsrecent.description=Az utóbbi N szavazás megtekintése
-rendering.macro.pollsrecent.name=Legutóbbi szavazások
-rendering.macro.pollsrecent.parameter.limit.description=Maximális bejegyzések száma
-rendering.macro.pollsrecent.parameter.limit.name=Határérték
-xpoll.livetable._actions=Műveletek
+
 xpoll.livetable.name=Név
 xpoll.livetable.status=Állapot
 xpoll.livetable.winner=Győztes
+xpoll.livetable._actions=Műveletek
+### Missing: xpoll.livetable.emptyvalue=-
+
+contrib.xpoll.preparation.hasRight=Az következő xpoll egyelőre nem végleges, a "szerkeszt" gombra kattintva tudja módosítani és aktiválni.
+contrib.xpoll.preparation.noRight=Az következő xpoll egyelőre nem végleges, a "szerkeszt" gombra kattintva tudja módosítani és aktiválni.
+
+contrib.xpoll.finish.message=A szavazás véget ért, a végeredmény\:
+
+contrib.xpoll.numberVotes=Szavazatok száma
+contrib.xpoll.user=Felhasználó
+
+contrib.xpoll.vote.guest.submit=Mentés
+contrib.xpoll.vote.user.submit=Mentés
+### Missing: contrib.xpoll.vote.saving=Saving...
+### Missing: contrib.xpoll.vote.saved=Saved
+### Missing: contrib.xpoll.vote.failed=Failed to save the document. Reason: {0}
+
+XPoll.XPollClass_name=Név
+XPoll.XPollClass_description=Leírás
+XPoll.XPollClass_status=Állapot
+XPoll.XPollClass_proposals=Javaslatok
+XPoll.XPollClass_proposals_hint=(vesszővel elválasztott lista)
+
+# Generic
+polls.author={0} által
+polls.date=ekkor\: {0}
+polls.nofiles=Jelenleg nincs aktív szavazás
+polls.addfiles=Szavazás hozzáadása
+polls.seeallfiles=Összes szavazás megtekintése
+
+# Recent polls macro
+polls.recentpolls.title=Legutóbbi szavazások
+rendering.macro.pollsrecent.name=Legutóbbi szavazások
+rendering.macro.pollsrecent.description=Az utóbbi N szavazás megtekintése
+rendering.macro.pollsrecent.parameter.limit.name=Határérték
+rendering.macro.pollsrecent.parameter.limit.description=Maximális bejegyzések száma
+
+# Template Provider
+### Missing: templateProvider.xpoll.name=Poll
+### Missing: templateProvider.xpoll.description=Analyze votes
 </content>
 </xwikidoc>
