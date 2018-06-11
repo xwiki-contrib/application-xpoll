@@ -51,7 +51,7 @@ XPoll.XPollClass_status_inpreparation=V príprave
 XPoll.XPollClass_status_active=Aktívny
 XPoll.XPollClass_status_finished=Ukončený
 
-contrib.xpoll.WebHome.description=Vitajte v aplikácii XWiki Poll. 
+contrib.xpoll.WebHome.description=Vitajte v aplikácii XWiki Poll.
 contrib.xpoll.WebHome.name=Názov
 contrib.xpoll.WebHome.status=Stav
 contrib.xpoll.WebHome.winner=Výherca

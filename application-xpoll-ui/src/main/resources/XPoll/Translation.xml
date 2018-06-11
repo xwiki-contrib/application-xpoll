@@ -54,7 +54,7 @@ XPoll.XPollClass_status_finished=Finished
 contrib.xpoll.WebHome.description=Welcome to the XWiki Poll Application. You can create a poll for your internal needs.
 contrib.xpoll.WebHome.name=Name
 contrib.xpoll.WebHome.status=Status
-contrib.xpoll.WebHome.winner=Winner 
+contrib.xpoll.WebHome.winner=Winner
 
 xpoll.livetable.name=Name
 xpoll.livetable.status=Status

@@ -74,7 +74,7 @@ contrib.xpoll.vote.guest.submit=Sauvegarder
 contrib.xpoll.vote.user.submit=Sauvegarder
 contrib.xpoll.vote.saving=Enregistrement...
 contrib.xpoll.vote.saved=Enregistré
-contrib.xpoll.vote.failed=Impossible d''enregistrer le document. Motif \: {0} 
+contrib.xpoll.vote.failed=Impossible d''enregistrer le document. Motif \: {0}
 
 XPoll.XPollClass_name=Titre
 XPoll.XPollClass_description=Description
