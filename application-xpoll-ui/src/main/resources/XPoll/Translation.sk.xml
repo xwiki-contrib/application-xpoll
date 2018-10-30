@@ -39,38 +39,65 @@
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>true</hidden>
-  <content>## XWiki Translation for language sk generated from http://www.l10n.xwiki.org
-XPoll.XPollClass_description=Popis
-XPoll.XPollClass_name=Názov
-XPoll.XPollClass_proposals=Návrhy
-XPoll.XPollClass_proposals_hint=(hodnoty oddelené čiarkami)
-XPoll.XPollClass_status=Stav
+  <content>contrib.xpoll.app.title=Ankety
+  
+contrib.xpoll.home.title=Ankety
+
+contrib.xpoll.status.active=Aktívny
+contrib.xpoll.status.inPreparation=V príprave
+contrib.xpoll.status.finished=Ukončený
+
+XPoll.XPollClass_status_inpreparation=V príprave
 XPoll.XPollClass_status_active=Aktívny
 XPoll.XPollClass_status_finished=Ukončený
-XPoll.XPollClass_status_inpreparation=V príprave
-contrib.xpoll.WebHome.description=Vitajte v aplikácii XWiki Poll. 
+
+contrib.xpoll.WebHome.description=Vitajte v aplikácii XWiki Poll.
 contrib.xpoll.WebHome.name=Názov
 contrib.xpoll.WebHome.status=Stav
 contrib.xpoll.WebHome.winner=Výherca
-contrib.xpoll.app.title=Ankety
-contrib.xpoll.finish.message=Hlasovanie je ukončené. Tu sú výsledky\:
-contrib.xpoll.home.title=Ankety
-contrib.xpoll.numberVotes=Počet hlasov
-contrib.xpoll.status.active=Aktívny
-contrib.xpoll.status.finished=Ukončený
-contrib.xpoll.status.inPreparation=V príprave
-contrib.xpoll.user=Používateľ
-contrib.xpoll.vote.guest.submit=Uložiť
-contrib.xpoll.vote.user.submit=Uložiť
-polls.addfiles=Pridať anketu
-polls.nofiles=Zatiaľ nie sú žiadne ankety.
-polls.recentpolls.title=Najnovšie ankety
-polls.seeallfiles=Ukázať všetky
-rendering.macro.pollsrecent.name=Najnovšie ankety
-rendering.macro.pollsrecent.parameter.limit.description=Počet maximálnych záznamov.
-xpoll.livetable._actions=Akcie
+
 xpoll.livetable.name=Názov
 xpoll.livetable.status=Stav
 xpoll.livetable.winner=Výherca
+xpoll.livetable._actions=Akcie
+### Missing: xpoll.livetable.emptyvalue=-
+
+### Missing: contrib.xpoll.preparation.hasRight=This xpoll is currently in preparation, click "edit" to modify it and activate it.
+### Missing: contrib.xpoll.preparation.noRight=This xpoll is currently in preparation, you do not have the rights to modify it.
+
+contrib.xpoll.finish.message=Hlasovanie je ukončené. Tu sú výsledky\:
+
+contrib.xpoll.numberVotes=Počet hlasov
+contrib.xpoll.user=Používateľ
+
+contrib.xpoll.vote.guest.submit=Uložiť
+contrib.xpoll.vote.user.submit=Uložiť
+### Missing: contrib.xpoll.vote.saving=Saving...
+### Missing: contrib.xpoll.vote.saved=Saved
+### Missing: contrib.xpoll.vote.failed=Failed to save the document. Reason: {0}
+
+XPoll.XPollClass_name=Názov
+XPoll.XPollClass_description=Popis
+XPoll.XPollClass_status=Stav
+XPoll.XPollClass_proposals=Návrhy
+XPoll.XPollClass_proposals_hint=(hodnoty oddelené čiarkami)
+
+# Generic
+### Missing: polls.author=by {0}
+### Missing: polls.date=on {0}
+polls.nofiles=Zatiaľ nie sú žiadne ankety.
+polls.addfiles=Pridať anketu
+polls.seeallfiles=Ukázať všetky
+
+# Recent polls macro
+polls.recentpolls.title=Najnovšie ankety
+rendering.macro.pollsrecent.name=Najnovšie ankety
+### Missing: rendering.macro.pollsrecent.description=Displays the N most recent polls.
+### Missing: rendering.macro.pollsrecent.parameter.limit.name=Limit
+rendering.macro.pollsrecent.parameter.limit.description=Počet maximálnych záznamov.
+
+# Template Provider
+### Missing: templateProvider.xpoll.name=Poll
+### Missing: templateProvider.xpoll.description=Analyze votes
 </content>
 </xwikidoc>

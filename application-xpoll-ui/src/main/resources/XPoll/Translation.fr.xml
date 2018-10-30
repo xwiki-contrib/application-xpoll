@@ -39,50 +39,65 @@
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>true</hidden>
-  <content>## XWiki Translation for language fr generated from http://www.l10n.xwiki.org
-XPoll.XPollClass_description=Description
-XPoll.XPollClass_name=Titre
-XPoll.XPollClass_proposals=Propositions
-XPoll.XPollClass_proposals_hint=(Liste d'éléments séparés par une virgule ou une barre verticale)
-XPoll.XPollClass_status=Statut
+  <content>contrib.xpoll.app.title=Sondage
+  
+contrib.xpoll.home.title=Sondages
+
+contrib.xpoll.status.active=Actif
+contrib.xpoll.status.inPreparation=En cours de préparation
+contrib.xpoll.status.finished=Terminé
+
+XPoll.XPollClass_status_inpreparation=En cours de préparation
 XPoll.XPollClass_status_active=Actif
 XPoll.XPollClass_status_finished=Terminé
-XPoll.XPollClass_status_inpreparation=En cours de préparation
+
 contrib.xpoll.WebHome.description=Bienvenue sur l'application Sondage. Vous pouvez créer un sondage en fonction de vos besoins.
 contrib.xpoll.WebHome.name=Nom
 contrib.xpoll.WebHome.status=Statut
-contrib.xpoll.WebHome.winner=Résultat
-contrib.xpoll.app.title=Sondage
-contrib.xpoll.finish.message=Le vote est terminé. Voici les résultats \:
-contrib.xpoll.home.title=Sondages
-contrib.xpoll.numberVotes=Nombre de votes
+contrib.xpoll.WebHome.winner=Gagnant
+
+xpoll.livetable.name=Nom
+xpoll.livetable.status=Statut
+xpoll.livetable.winner=Résultat
+xpoll.livetable._actions=Actions
+xpoll.livetable.emptyvalue=-
+
 contrib.xpoll.preparation.hasRight=Ce sondage est actuellement en préparation, cliquez sur "éditer" pour le modifier et l'activer.
 contrib.xpoll.preparation.noRight=Ce sondage est actuellement en préparation, vous n'avez pas le droit de le modifier.
-contrib.xpoll.status.active=Actif
-contrib.xpoll.status.finished=Terminé
-contrib.xpoll.status.inPreparation=En cours de préparation
+
+contrib.xpoll.finish.message=Le vote est terminé. Voici les résultats :
+
+contrib.xpoll.numberVotes=Nombre de votes
 contrib.xpoll.user=Utilisateur
-contrib.xpoll.vote.failed=Impossible d''enregistrer le document. Motif \: {0} 
+
 contrib.xpoll.vote.guest.submit=Sauvegarder
-contrib.xpoll.vote.saved=Enregistré
-contrib.xpoll.vote.saving=Enregistrement...
 contrib.xpoll.vote.user.submit=Sauvegarder
-polls.addfiles=Ajouter un sondage
+contrib.xpoll.vote.saving=Enregistrement...
+contrib.xpoll.vote.saved=Enregistré
+contrib.xpoll.vote.failed=Impossible d''enregistrer le document. Motif : {0}
+
+XPoll.XPollClass_name=Titre
+XPoll.XPollClass_description=Description
+XPoll.XPollClass_status=Statut
+XPoll.XPollClass_proposals=Propositions
+XPoll.XPollClass_proposals_hint=(Liste d'éléments séparés par une virgule ou une barre verticale)
+
+# Generic
 polls.author=par {0}
 polls.date=le {0}
 polls.nofiles=Il n'y a pas encore de sondage
-polls.recentpolls.title=Sondages récents
+polls.addfiles=Ajouter un sondage
 polls.seeallfiles=Voir tous les sondages
-rendering.macro.pollsrecent.description=Affiche les N plus récents sondages.
+
+# Recent polls macro
+polls.recentpolls.title=Sondages récents
 rendering.macro.pollsrecent.name=Sondages récents
-rendering.macro.pollsrecent.parameter.limit.description=Nombre maximum d'entrées.
+rendering.macro.pollsrecent.description=Affiche les N plus récents sondages.
 rendering.macro.pollsrecent.parameter.limit.name=Limite
-templateProvider.xpoll.description=Analyser les votes
+rendering.macro.pollsrecent.parameter.limit.description=Nombre maximum d'entrées.
+
+# Template Provider
 templateProvider.xpoll.name=Sondage
-xpoll.livetable._actions=Actions
-xpoll.livetable.emptyvalue=-
-xpoll.livetable.name=Nom
-xpoll.livetable.status=Statut
-xpoll.livetable.winner=Résultat 
+templateProvider.xpoll.description=Analyser les votes
 </content>
 </xwikidoc>

@@ -39,44 +39,65 @@
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>true</hidden>
-  <content>## XWiki Translation for language it generated from http://www.l10n.xwiki.org
-XPoll.XPollClass_description=Descrizione
-XPoll.XPollClass_name=Nome
-XPoll.XPollClass_proposals=Proposte
-XPoll.XPollClass_proposals_hint=(Lista di proposte separate da virgola o da | )
-XPoll.XPollClass_status=Stato
+  <content>contrib.xpoll.app.title=Sondaggi
+  
+contrib.xpoll.home.title=Sondaggi
+
+contrib.xpoll.status.active=Attivo
+contrib.xpoll.status.inPreparation=In preparazione
+contrib.xpoll.status.finished=Finito
+
+XPoll.XPollClass_status_inpreparation=In preparazione
 XPoll.XPollClass_status_active=Attivo
 XPoll.XPollClass_status_finished=Finito
-XPoll.XPollClass_status_inpreparation=In preparazione
+
 contrib.xpoll.WebHome.description=Benvenuto all'applicazione XWiki Sondaggio. Puoi creare un sondaggio per le tue necessità interne.
 contrib.xpoll.WebHome.name=Nome
 contrib.xpoll.WebHome.status=Stato
 contrib.xpoll.WebHome.winner=Vincitore
-contrib.xpoll.app.title=Sondaggi
-contrib.xpoll.finish.message=Votazione terminata. Ecco i risultati\:
-contrib.xpoll.home.title=Sondaggi
-contrib.xpoll.numberVotes=Numero di voti
-contrib.xpoll.preparation.hasRight=Questo sondaggio è in preparazione, clicca "modifica" per modificarlo e attivarlo.
-contrib.xpoll.preparation.noRight=Questo sondaggio è in preparazione, e tu non hai il permesso di modificarlo.
-contrib.xpoll.status.active=Attivo
-contrib.xpoll.status.finished=Finito
-contrib.xpoll.status.inPreparation=In preparazione
-contrib.xpoll.user=Utente
-contrib.xpoll.vote.guest.submit=Salva
-contrib.xpoll.vote.user.submit=Salva
-polls.addfiles=Aggiungi sondaggio
-polls.author=di {0}
-polls.date=il {0}
-polls.nofiles=Non ci sono ancora sondaggi
-polls.recentpolls.title=Sondaggi Recenti
-polls.seeallfiles=Vedi tutti i sondaggi
-rendering.macro.pollsrecent.description=Mostra i N sondaggi più recenti.
-rendering.macro.pollsrecent.name=Sondaggi Recenti
-rendering.macro.pollsrecent.parameter.limit.description=Numero massimo di voci.
-rendering.macro.pollsrecent.parameter.limit.name=Limite
-xpoll.livetable._actions=Azioni
+
 xpoll.livetable.name=Nome
 xpoll.livetable.status=Stato
 xpoll.livetable.winner=Vincitore
+xpoll.livetable._actions=Azioni
+### Missing: xpoll.livetable.emptyvalue=-
+
+contrib.xpoll.preparation.hasRight=Questo sondaggio è in preparazione, clicca "modifica" per modificarlo e attivarlo.
+contrib.xpoll.preparation.noRight=Questo sondaggio è in preparazione, e tu non hai il permesso di modificarlo.
+
+contrib.xpoll.finish.message=Votazione terminata. Ecco i risultati\:
+
+contrib.xpoll.numberVotes=Numero di voti
+contrib.xpoll.user=Utente
+
+contrib.xpoll.vote.guest.submit=Salva
+contrib.xpoll.vote.user.submit=Salva
+### Missing: contrib.xpoll.vote.saving=Saving...
+### Missing: contrib.xpoll.vote.saved=Saved
+### Missing: contrib.xpoll.vote.failed=Failed to save the document. Reason: {0}
+
+XPoll.XPollClass_name=Nome
+XPoll.XPollClass_description=Descrizione
+XPoll.XPollClass_status=Stato
+XPoll.XPollClass_proposals=Proposte
+XPoll.XPollClass_proposals_hint=(Lista di proposte separate da virgola o da | )
+
+# Generic
+polls.author=di {0}
+polls.date=il {0}
+polls.nofiles=Non ci sono ancora sondaggi
+polls.addfiles=Aggiungi sondaggio
+polls.seeallfiles=Vedi tutti i sondaggi
+
+# Recent polls macro
+polls.recentpolls.title=Sondaggi Recenti
+rendering.macro.pollsrecent.name=Sondaggi Recenti
+rendering.macro.pollsrecent.description=Mostra i N sondaggi più recenti.
+rendering.macro.pollsrecent.parameter.limit.name=Limite
+rendering.macro.pollsrecent.parameter.limit.description=Numero massimo di voci.
+
+# Template Provider
+### Missing: templateProvider.xpoll.name=Poll
+### Missing: templateProvider.xpoll.description=Analyze votes
 </content>
 </xwikidoc>
