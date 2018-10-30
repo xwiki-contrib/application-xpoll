@@ -54,7 +54,7 @@ XPoll.XPollClass_status_finished=Terminé
 contrib.xpoll.WebHome.description=Bienvenue sur l'application Sondage. Vous pouvez créer un sondage en fonction de vos besoins.
 contrib.xpoll.WebHome.name=Nom
 contrib.xpoll.WebHome.status=Statut
-contrib.xpoll.WebHome.winner=Résultat
+contrib.xpoll.WebHome.winner=Gagnant
 
 xpoll.livetable.name=Nom
 xpoll.livetable.status=Statut
@@ -65,7 +65,7 @@ xpoll.livetable.emptyvalue=-
 contrib.xpoll.preparation.hasRight=Ce sondage est actuellement en préparation, cliquez sur "éditer" pour le modifier et l'activer.
 contrib.xpoll.preparation.noRight=Ce sondage est actuellement en préparation, vous n'avez pas le droit de le modifier.
 
-contrib.xpoll.finish.message=Le vote est terminé. Voici les résultats \:
+contrib.xpoll.finish.message=Le vote est terminé. Voici les résultats :
 
 contrib.xpoll.numberVotes=Nombre de votes
 contrib.xpoll.user=Utilisateur
@@ -74,7 +74,7 @@ contrib.xpoll.vote.guest.submit=Sauvegarder
 contrib.xpoll.vote.user.submit=Sauvegarder
 contrib.xpoll.vote.saving=Enregistrement...
 contrib.xpoll.vote.saved=Enregistré
-contrib.xpoll.vote.failed=Impossible d''enregistrer le document. Motif \: {0}
+contrib.xpoll.vote.failed=Impossible d''enregistrer le document. Motif : {0}
 
 XPoll.XPollClass_name=Titre
 XPoll.XPollClass_description=Description
