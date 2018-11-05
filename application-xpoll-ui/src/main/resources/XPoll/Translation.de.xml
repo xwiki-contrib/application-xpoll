@@ -94,9 +94,9 @@ polls.recentpolls.title=Aktuelle Umfragen
 rendering.macro.pollsrecent.name=Aktuelle Umfragen
 rendering.macro.pollsrecent.description=Zeigt die N jüngsten Umfragen an.
 rendering.macro.pollsrecent.parameter.limit.name=Limit
-### Missing: rendering.macro.pollsrecent.parameter.limit.description=Number of maximum entries.
+rendering.macro.pollsrecent.parameter.limit.description=Maximale Anzahl Einträge.
 
 # Template Provider
-### Missing: templateProvider.xpoll.name=Poll
-### Missing: templateProvider.xpoll.description=Analyze votes</content>
+templateProvider.xpoll.name=Umfrage
+templateProvider.xpoll.description=Stimmen analysieren</content>
 </xwikidoc>
