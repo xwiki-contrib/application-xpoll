@@ -39,61 +39,61 @@
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>true</hidden>
-  <content>### Missing: contrib.xpoll.app.title=Polls
+  <content>contrib.xpoll.app.title=Umfragen
   
-### Missing: contrib.xpoll.home.title=Polls
+contrib.xpoll.home.title=Umfragen
 
-### Missing: contrib.xpoll.status.active=Active
-### Missing: contrib.xpoll.status.inPreparation=In preparation
-### Missing: contrib.xpoll.status.finished=Finished
+contrib.xpoll.status.active=Aktiv
+contrib.xpoll.status.inPreparation=In Vorbereitung
+contrib.xpoll.status.finished=Beendet
 
-### Missing: XPoll.XPollClass_status_inpreparation=In preparation
-### Missing: XPoll.XPollClass_status_active=Active
-### Missing: XPoll.XPollClass_status_finished=Finished
+XPoll.XPollClass_status_inpreparation=In Vorbereitung
+XPoll.XPollClass_status_active=Aktiv
+XPoll.XPollClass_status_finished=Beendet
 
-### Missing: contrib.xpoll.WebHome.description=Welcome to the XWiki Poll Application. You can create a poll for your internal needs.
-### Missing: contrib.xpoll.WebHome.name=Name
-### Missing: contrib.xpoll.WebHome.status=Status
-### Missing: contrib.xpoll.WebHome.winner=Winner
+contrib.xpoll.WebHome.description=Willkommen bei der XWiki Umfragen Anwendung. Sie können eine Umfrage für Ihre internen Bedürfnisse erstellen.
+contrib.xpoll.WebHome.name=Name
+contrib.xpoll.WebHome.status=Status
+contrib.xpoll.WebHome.winner=Sieger
 
-### Missing: xpoll.livetable.name=Name
-### Missing: xpoll.livetable.status=Status
-### Missing: xpoll.livetable.winner=Winner
-### Missing: xpoll.livetable._actions=Actions
-### Missing: xpoll.livetable.emptyvalue=-
+xpoll.livetable.name=Name
+xpoll.livetable.status=Status
+xpoll.livetable.winner=Sieger
+xpoll.livetable._actions=Aktionen
+xpoll.livetable.emptyvalue=-
 
-### Missing: contrib.xpoll.preparation.hasRight=This xpoll is currently in preparation, click "edit" to modify it and activate it.
-### Missing: contrib.xpoll.preparation.noRight=This xpoll is currently in preparation, you do not have the rights to modify it.
+contrib.xpoll.preparation.hasRight=Diese XUmfrage ist aktuell in Vorbereitung, klicke "bearbeiten" um sie anzupassen und zu aktivieren.
+contrib.xpoll.preparation.noRight=Diese XUmfrage ist aktuell in Vorbereitung, Sie haben nicht die Berechtigung sie zu bearbeiten.
 
-### Missing: contrib.xpoll.finish.message=Vote is finished. Here are the results:
+contrib.xpoll.finish.message=Umfrage beendet. Hier sind die Ergebnisse:
 
-### Missing: contrib.xpoll.numberVotes=Number of votes
-### Missing: contrib.xpoll.user=User
+contrib.xpoll.numberVotes=Anzahl der Stimmen
+contrib.xpoll.user=Teilnehmer
 
-### Missing: contrib.xpoll.vote.guest.submit=Save
-### Missing: contrib.xpoll.vote.user.submit=Save
-### Missing: contrib.xpoll.vote.saving=Saving...
-### Missing: contrib.xpoll.vote.saved=Saved
-### Missing: contrib.xpoll.vote.failed=Failed to save the document. Reason: {0}
+contrib.xpoll.vote.guest.submit=Speichern
+contrib.xpoll.vote.user.submit=Speichern
+contrib.xpoll.vote.saving=Speichert…
+contrib.xpoll.vote.saved=Gespeichert
+contrib.xpoll.vote.failed=Fehler beim Speichern des Dokuments. Grund: {0}
 
-### Missing: XPoll.XPollClass_name=Name
-### Missing: XPoll.XPollClass_description=Description
-### Missing: XPoll.XPollClass_status=Status
-### Missing: XPoll.XPollClass_proposals=Proposals
-### Missing: XPoll.XPollClass_proposals_hint=(Comma or pipe separated list)
+XPoll.XPollClass_name=Name
+XPoll.XPollClass_description=Beschreibung
+XPoll.XPollClass_status=Status
+XPoll.XPollClass_proposals=Vorschläge
+XPoll.XPollClass_proposals_hint=(Mit Komma oder senkrechtem Strich getrennte Liste)
 
 # Generic
-### Missing: polls.author=by {0}
-### Missing: polls.date=on {0}
-### Missing: polls.nofiles=There are no polls yet
-### Missing: polls.addfiles=Add poll
-### Missing: polls.seeallfiles=See all polls
+polls.author=Von {0}
+polls.date=am {0}
+polls.nofiles=Es gibt noch keine Umfragen
+polls.addfiles=Umfrage erstellen
+polls.seeallfiles=Alle Umfragen anzeigen
 
 # Recent polls macro
-### Missing: polls.recentpolls.title=Recent Polls
-### Missing: rendering.macro.pollsrecent.name=Recent Polls
-### Missing: rendering.macro.pollsrecent.description=Displays the N most recent polls.
-### Missing: rendering.macro.pollsrecent.parameter.limit.name=Limit
+polls.recentpolls.title=Aktuelle Umfragen
+rendering.macro.pollsrecent.name=Aktuelle Umfragen
+rendering.macro.pollsrecent.description=Zeigt die N jüngsten Umfragen an.
+rendering.macro.pollsrecent.parameter.limit.name=Limit
 ### Missing: rendering.macro.pollsrecent.parameter.limit.description=Number of maximum entries.
 
 # Template Provider
