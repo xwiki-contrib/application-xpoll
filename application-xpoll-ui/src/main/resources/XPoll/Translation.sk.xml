@@ -98,6 +98,5 @@ rendering.macro.pollsrecent.parameter.limit.description=Počet maximálnych záz
 
 # Template Provider
 ### Missing: templateProvider.xpoll.name=Poll
-### Missing: templateProvider.xpoll.description=Analyze votes
-</content>
+### Missing: templateProvider.xpoll.description=Analyze votes</content>
 </xwikidoc>
