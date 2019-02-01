@@ -98,6 +98,5 @@ rendering.macro.pollsrecent.parameter.limit.description=Nombre maximum d'entrée
 
 # Template Provider
 templateProvider.xpoll.name=Sondage
-templateProvider.xpoll.description=Analyser les votes
-</content>
+templateProvider.xpoll.description=Analyser les votes</content>
 </xwikidoc>
