@@ -39,6 +39,65 @@
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>true</hidden>
-  <content></content>
+  <content>contrib.xpoll.app.title=Опросы
+  
+contrib.xpoll.home.title=Опросы
+
+contrib.xpoll.status.active=Активный
+contrib.xpoll.status.inPreparation=Готовящийся
+contrib.xpoll.status.finished=Завершенный
+
+XPoll.XPollClass_status_inpreparation=Готовящийся
+XPoll.XPollClass_status_active=Активный
+XPoll.XPollClass_status_finished=Завершенный
+
+contrib.xpoll.WebHome.description=Добро пожаловать в приложение XWiki Poll. Вы можете создать опрос для ваших внутренних нужд.
+contrib.xpoll.WebHome.name=Название
+contrib.xpoll.WebHome.status=Статус
+contrib.xpoll.WebHome.winner=Победитель
+
+xpoll.livetable.name=Название
+xpoll.livetable.status=Статус
+xpoll.livetable.winner=Победитель
+xpoll.livetable._actions=Действия
+xpoll.livetable.emptyvalue=-
+
+contrib.xpoll.preparation.hasRight=Этот опрос в текущий момент находится в процессе подготовки, нажмите "Правка", чтобы его изменить и активировать.
+contrib.xpoll.preparation.noRight=Этот опрос в текущий момент находится в процессе подготовки, у Вас нет прав на его изменение.
+
+contrib.xpoll.finish.message=Опрос завершен. Результаты:
+
+contrib.xpoll.numberVotes=Количество голосов
+contrib.xpoll.user=Пользователь
+
+contrib.xpoll.vote.guest.submit=Сохранить
+contrib.xpoll.vote.user.submit=Сохранить
+contrib.xpoll.vote.saving=Сохранение...
+contrib.xpoll.vote.saved=Сохранено
+contrib.xpoll.vote.failed=Ошибка сохранения документа. Причина: {0}
+
+XPoll.XPollClass_name=Название
+XPoll.XPollClass_description=Описание
+XPoll.XPollClass_status=Статус
+XPoll.XPollClass_proposals=Предложения
+XPoll.XPollClass_proposals_hint=(Список через запятую или вертикальную черту)
+
+# Generic
+polls.author={0}
+polls.date={0}
+polls.nofiles=Пока нет опросов
+polls.addfiles=Добавить опрос
+polls.seeallfiles=Просмотр всех опросов
+
+# Recent polls macro
+polls.recentpolls.title=Последние опросы
+rendering.macro.pollsrecent.name=Последние опросы
+rendering.macro.pollsrecent.description=Отображает N последних опросов.
+rendering.macro.pollsrecent.parameter.limit.name=Лимит
+rendering.macro.pollsrecent.parameter.limit.description=Максимальное количество записей.
+
+# Template Provider
+templateProvider.xpoll.name=Опрос
+templateProvider.xpoll.description=Анализ голосов</content>
   
 </xwikidoc>
