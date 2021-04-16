@@ -1,1 +1,93 @@
+<?xml version="1.1" encoding="UTF-8"?>
 
+<!--
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+-->
+
+<xwikidoc version="1.2" reference="XPoll.Translation" locale="es">
+  <web>XPoll</web>
+  <name>Translation</name>
+  <language>es</language>
+  <defaultLanguage>en</defaultLanguage>
+  <translation>1</translation>
+  <creator>xwiki:XWiki.Admin</creator>
+  <parent>XPoll.WebHome</parent>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
+  <creationDate>1386247559000</creationDate>
+  <date>1386247874000</date>
+  <contentUpdateDate>1386247874000</contentUpdateDate>
+  <version>1.1</version>
+  <title>Translation</title>
+  <comment/>
+  <minorEdit>false</minorEdit>
+  <syntaxId>xwiki/2.1</syntaxId>
+  <hidden>true</hidden>
+  <content>contrib.xpoll.app.title=Encuestas
+contrib.xpoll.home.title=Encuestas
+contrib.xpoll.status.active=Activa
+contrib.xpoll.status.inPreparation=En preparación
+contrib.xpoll.status.finished=Finalizada
+XPoll.XPollClass_status_inpreparation=En preparación
+XPoll.XPollClass_status_active=Activa
+XPoll.XPollClass_status_finished=Finalizada
+contrib.xpoll.WebHome.description=Le damos la bienvenida a la aplicación de encuestas de XWiki. Puede crear encuestas en función de sus necesidades.
+contrib.xpoll.WebHome.name=Nombre
+contrib.xpoll.WebHome.status=Estado
+contrib.xpoll.WebHome.winner=Ganador
+xpoll.livetable.name=Nombre
+xpoll.livetable.status=Estado
+xpoll.livetable.winner=Ganador
+xpoll.livetable._actions=Acciones
+xpoll.livetable.emptyvalue=—
+contrib.xpoll.preparation.hasRight=Esta «xpoll» está en preparación. Pulse en «Editar» para modificarla y activarla.
+contrib.xpoll.preparation.noRight=Esta «xpoll» está en preparación. No tiene permisos para modificarla.
+contrib.xpoll.finish.message=La votación ha terminado. He aquí los resultados:
+contrib.xpoll.numberVotes=Número de votos
+contrib.xpoll.user=Usuario
+contrib.xpoll.vote.guest.submit=Guardar
+contrib.xpoll.vote.user.submit=Guardar
+contrib.xpoll.vote.saving=Guardando…
+contrib.xpoll.vote.saved=Guardado
+contrib.xpoll.vote.failed=No se pudo guardar el documento. Razón: {0}
+XPoll.XPollClass_name=Nombre
+XPoll.XPollClass_description=Descripción
+XPoll.XPollClass_status=Estado
+XPoll.XPollClass_proposals=Propuestas
+XPoll.XPollClass_proposals_hint=(lista separada por comas o plecas)
+
+# Generic
+polls.author=por {0}
+polls.date=el {0}
+polls.nofiles=No hay ninguna encuesta todavía
+polls.addfiles=Añadir encuesta
+polls.seeallfiles=Ver todas las encuestas
+
+# Recent polls macro
+polls.recentpolls.title=Encuestas recientes
+rendering.macro.pollsrecent.name=Encuestas recientes
+rendering.macro.pollsrecent.description=Muestra las N encuestas más recientes.
+rendering.macro.pollsrecent.parameter.limit.name=Límite
+rendering.macro.pollsrecent.parameter.limit.description=Número máximo de entradas.
+
+# Template Provider
+templateProvider.xpoll.name=Encuesta
+templateProvider.xpoll.description=Analizar votos
+</content>
+  </xwikidoc>
