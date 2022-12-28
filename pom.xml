@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!--
- *
  * See the NOTICE file distributed with this work for additional
  * information regarding copyright ownership.
  *
@@ -19,17 +18,15 @@
  * License along with this software; if not, write to the Free
  * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
  * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
- *
 -->
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>org.xwiki.commons</groupId>
-    <artifactId>xwiki-commons-pom</artifactId>
-    <version>6.4</version>
+    <groupId>org.xwiki.contrib</groupId>
+    <artifactId>parent-platform</artifactId>
+    <version>8.4-11</version>
   </parent>
-  <groupId>org.xwiki.contrib</groupId>
   <artifactId>application-xpoll</artifactId>
   <version>1.6.8-SNAPSHOT</version>
   <packaging>pom</packaging>
@@ -45,27 +42,20 @@
       <name>Andreea Popescu</name>
     </developer>
   </developers>
+  <properties>
+    <xwiki.release.jira.skip>false</xwiki.release.jira.skip>
+    <xwiki.issueManagement.jira.id>XDOODLE</xwiki.issueManagement.jira.id>
+  </properties>
   <organization>
     <name>XWiki SAS</name>
     <url>http://xwiki.com</url>
   </organization>
-  <properties>
-    <platform.version>${commons.version}</platform.version>
-    <rendering.version>${commons.version}</rendering.version>
-  </properties>
   <scm>
     <connection>scm:git:git://github.com/xwiki-contrib/application-xpoll.git</connection>
     <developerConnection>scm:git:git@github.com:xwiki-contrib/application-xpoll.git</developerConnection>
     <url>https://github.com/xwiki-contrib/application-xpoll/tree/master</url>
     <tag>HEAD</tag>
   </scm>
-  <distributionManagement>
-    <repository>
-      <id>xwiki-staging</id>
-      <name>XWiki Staging Repository</name>
-      <url>http://nexus.xwiki.org/nexus/service/local/staging/deploy/maven2/</url>
-    </repository>
-  </distributionManagement>
   <modules>
     <module>application-xpoll-ui</module>
   </modules>

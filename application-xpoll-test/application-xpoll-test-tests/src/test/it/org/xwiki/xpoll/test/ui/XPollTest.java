@@ -43,7 +43,7 @@ import org.xwiki.xpoll.test.po.XPollHomePage;
 public class XPollTest extends AbstractTest
 {
     @Rule
-    public SuperAdminAuthenticationRule authenticationRule = new SuperAdminAuthenticationRule(getUtil(), getDriver());
+    public SuperAdminAuthenticationRule authenticationRule = new SuperAdminAuthenticationRule(getUtil());
 
     public static final String pollName = "Poll 1";
 
