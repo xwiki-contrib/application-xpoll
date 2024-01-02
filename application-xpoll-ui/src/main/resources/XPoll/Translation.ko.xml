@@ -58,36 +58,36 @@ xpoll.livetable._actions=행위
 xpoll.livetable.emptyvalue=-
 contrib.xpoll.preparation.hasRight=이 xpoll은 현재 준비 중입니다. "수정"을 클릭하여 수정하고 활성화하세요.
 contrib.xpoll.preparation.noRight=이 xpoll은 현재 준비 중이므로 수정할 권한이 없습니다.
-contrib.xpoll.finish.message=투표가 완료되었습니다. 결과는 다음과 같습니다.
+contrib.xpoll.finish.message=투표가 완료되었습니다. 결과는 다음과 같습니다:
 contrib.xpoll.numberVotes=투표수
 contrib.xpoll.user=사용자
-contrib.xpoll.vote.guest.submit=구하다
-contrib.xpoll.vote.user.submit=구하다
+contrib.xpoll.vote.guest.submit=저장
+contrib.xpoll.vote.user.submit=저장
 contrib.xpoll.vote.saving=절약...
 contrib.xpoll.vote.saved=저장됨
 contrib.xpoll.vote.failed=문서를 저장하지 못했습니다. 이유: {0}
 XPoll.XPollClass_name=이름
-XPoll.XPollClass_description=삭제 진행 중...
-XPoll.XPollClass_status=삭제 진행 중...
-XPoll.XPollClass_proposals=삭제 진행 중...
-XPoll.XPollClass_proposals_hint=삭제 진행 중...
+XPoll.XPollClass_description=설명
+XPoll.XPollClass_status=상태
+XPoll.XPollClass_proposals=제안
+XPoll.XPollClass_proposals_hint=(쉼표 또는 파이프로 구분된 목록)
 
 # Generic
-polls.author=삭제 진행 중...
-polls.date=삭제 진행 중...
-polls.nofiles=삭제 진행 중...
-polls.addfiles=삭제 진행 중...
-polls.seeallfiles=삭제 진행 중...
+polls.author={0}까지
+polls.date={0}에
+polls.nofiles=아직 여론조사가 없습니다
+polls.addfiles=설문조사 추가
+polls.seeallfiles=모든 설문조사 보기
 
 # Recent polls macro
-polls.recentpolls.title=삭제 진행 중...
-rendering.macro.pollsrecent.name=삭제 진행 중...
-rendering.macro.pollsrecent.description=삭제 진행 중...
-rendering.macro.pollsrecent.parameter.limit.name=삭제 진행 중...
-rendering.macro.pollsrecent.parameter.limit.description=삭제 진행 중...
+polls.recentpolls.title=최근 여론조사
+rendering.macro.pollsrecent.name=최근 여론조사
+rendering.macro.pollsrecent.description=N개의 최근 설문조사를 표시합니다.
+rendering.macro.pollsrecent.parameter.limit.name=한계
+rendering.macro.pollsrecent.parameter.limit.description=최대 항목 수입니다.
 
 # Template Provider
-templateProvider.xpoll.name=이 저장되었지만, 일부 새롭게 실패한 검사가 있습니다: 일치하지 않는 마침표(.), 일치하지 않는 물음표(?)
-templateProvider.xpoll.description=이 저장되었지만, 일부 새롭게 실패한 검사가 있습니다: 일치하지 않는 마침표(.), 일치하지 않는 물음표(?)
+templateProvider.xpoll.name=투표
+templateProvider.xpoll.description=투표 분석
 </content>
   </xwikidoc>
