@@ -1,0 +1,93 @@
+<?xml version="1.1" encoding="UTF-8"?>
+
+<!--
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+-->
+
+<xwikidoc version="1.2" reference="XPoll.Translation" locale="ko">
+  <web>XPoll</web>
+  <name>Translation</name>
+  <language>ko</language>
+  <defaultLanguage>en</defaultLanguage>
+  <translation>1</translation>
+  <creator>xwiki:XWiki.Admin</creator>
+  <parent>XPoll.WebHome</parent>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
+  <creationDate>1386247559000</creationDate>
+  <date>1386247874000</date>
+  <contentUpdateDate>1386247874000</contentUpdateDate>
+  <version>1.1</version>
+  <title>Translation</title>
+  <comment/>
+  <minorEdit>false</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>true</hidden>
+  <content>contrib.xpoll.app.title=투표소
+contrib.xpoll.home.title=투표소
+contrib.xpoll.status.active=활동적인
+contrib.xpoll.status.inPreparation=준비중
+contrib.xpoll.status.finished=완성된
+XPoll.XPollClass_status_inpreparation=준비중
+XPoll.XPollClass_status_active=활동적인
+XPoll.XPollClass_status_finished=완성된
+contrib.xpoll.WebHome.description=XWiki 설문조사 애플리케이션에 오신 것을 환영합니다. 내부 요구 사항에 대한 설문 조사를 만들 수 있습니다.
+contrib.xpoll.WebHome.name=이름
+contrib.xpoll.WebHome.status=상태
+contrib.xpoll.WebHome.winner=우승자
+xpoll.livetable.name=이름
+xpoll.livetable.status=상태
+xpoll.livetable.winner=우승자
+xpoll.livetable._actions=행위
+xpoll.livetable.emptyvalue=-
+contrib.xpoll.preparation.hasRight=이 xpoll은 현재 준비 중입니다. "수정"을 클릭하여 수정하고 활성화하세요.
+contrib.xpoll.preparation.noRight=이 xpoll은 현재 준비 중이므로 수정할 권한이 없습니다.
+contrib.xpoll.finish.message=투표가 완료되었습니다. 결과는 다음과 같습니다.
+contrib.xpoll.numberVotes=투표수
+contrib.xpoll.user=사용자
+contrib.xpoll.vote.guest.submit=구하다
+contrib.xpoll.vote.user.submit=구하다
+contrib.xpoll.vote.saving=절약...
+contrib.xpoll.vote.saved=저장됨
+contrib.xpoll.vote.failed=문서를 저장하지 못했습니다. 이유: {0}
+XPoll.XPollClass_name=이름
+XPoll.XPollClass_description=삭제 진행 중...
+XPoll.XPollClass_status=삭제 진행 중...
+XPoll.XPollClass_proposals=삭제 진행 중...
+XPoll.XPollClass_proposals_hint=삭제 진행 중...
+
+# Generic
+polls.author=삭제 진행 중...
+polls.date=삭제 진행 중...
+polls.nofiles=삭제 진행 중...
+polls.addfiles=삭제 진행 중...
+polls.seeallfiles=삭제 진행 중...
+
+# Recent polls macro
+polls.recentpolls.title=삭제 진행 중...
+rendering.macro.pollsrecent.name=삭제 진행 중...
+rendering.macro.pollsrecent.description=삭제 진행 중...
+rendering.macro.pollsrecent.parameter.limit.name=삭제 진행 중...
+rendering.macro.pollsrecent.parameter.limit.description=삭제 진행 중...
+
+# Template Provider
+templateProvider.xpoll.name=이 저장되었지만, 일부 새롭게 실패한 검사가 있습니다: 일치하지 않는 마침표(.), 일치하지 않는 물음표(?)
+templateProvider.xpoll.description=이 저장되었지만, 일부 새롭게 실패한 검사가 있습니다: 일치하지 않는 마침표(.), 일치하지 않는 물음표(?)
+</content>
+  </xwikidoc>
