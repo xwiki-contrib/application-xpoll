@@ -39,55 +39,55 @@
   <minorEdit>false</minorEdit>
   <syntaxId>plain/1.0</syntaxId>
   <hidden>true</hidden>
-  <content>### Missing: contrib.xpoll.app.title=
-### Missing: contrib.xpoll.home.title=
-### Missing: contrib.xpoll.status.active=
-### Missing: contrib.xpoll.status.inPreparation=
-### Missing: contrib.xpoll.status.finished=
-### Missing: XPoll.XPollClass_status_inpreparation=
-### Missing: XPoll.XPollClass_status_active=
-### Missing: XPoll.XPollClass_status_finished=
-### Missing: contrib.xpoll.WebHome.description=
-### Missing: contrib.xpoll.WebHome.name=
-### Missing: contrib.xpoll.WebHome.status=
-### Missing: contrib.xpoll.WebHome.winner=
-### Missing: xpoll.livetable.name=
-### Missing: xpoll.livetable.status=
-### Missing: xpoll.livetable.winner=
-### Missing: xpoll.livetable._actions=
-### Missing: xpoll.livetable.emptyvalue=
-### Missing: contrib.xpoll.preparation.hasRight=
-### Missing: contrib.xpoll.preparation.noRight=
-### Missing: contrib.xpoll.finish.message=
-### Missing: contrib.xpoll.numberVotes=
-### Missing: contrib.xpoll.user=
-### Missing: contrib.xpoll.vote.guest.submit=
-### Missing: contrib.xpoll.vote.user.submit=
-### Missing: contrib.xpoll.vote.saving=
-### Missing: contrib.xpoll.vote.saved=
-### Missing: contrib.xpoll.vote.failed=
-### Missing: XPoll.XPollClass_name=
-### Missing: XPoll.XPollClass_description=
-### Missing: XPoll.XPollClass_status=
-### Missing: XPoll.XPollClass_proposals=
-### Missing: XPoll.XPollClass_proposals_hint=
+  <content>contrib.xpoll.app.title=Afstemninger
+contrib.xpoll.home.title=Afstemninger
+contrib.xpoll.status.active=Aktiv
+contrib.xpoll.status.inPreparation=Under forberedelse
+contrib.xpoll.status.finished=Afsluttet
+XPoll.XPollClass_status_inpreparation=Under forberedelse
+XPoll.XPollClass_status_active=Aktiv
+XPoll.XPollClass_status_finished=Afsluttet
+contrib.xpoll.WebHome.description=Velkommen til XWikis program til afstemninger. Du kan oprette en afstemning til interne formål.
+contrib.xpoll.WebHome.name=Navn
+contrib.xpoll.WebHome.status=Status
+contrib.xpoll.WebHome.winner=Vinder
+xpoll.livetable.name=Navn
+xpoll.livetable.status=Status
+xpoll.livetable.winner=Vinder
+xpoll.livetable._actions=Handlinger
+xpoll.livetable.emptyvalue=-
+contrib.xpoll.preparation.hasRight=Denne afstemning er under forberedelse. Klik på "Rediger" for at ændre og aktivere den.
+contrib.xpoll.preparation.noRight=Denne afstemning er under forberedelse, og du har ikke rettigheder til at ændre den.
+contrib.xpoll.finish.message=Afstemningen er afsluttet. Her er resultatet:
+contrib.xpoll.numberVotes=Antal stemmer
+contrib.xpoll.user=Bruger
+contrib.xpoll.vote.guest.submit=Gem
+contrib.xpoll.vote.user.submit=Gem
+contrib.xpoll.vote.saving=Gemmer...
+contrib.xpoll.vote.saved=Gemt
+contrib.xpoll.vote.failed=Dokumentet kunne ikke gemmes. Årsag: {0}
+XPoll.XPollClass_name=Navn
+XPoll.XPollClass_description=Beskrivelse
+XPoll.XPollClass_status=Status
+XPoll.XPollClass_proposals=Forslag
+XPoll.XPollClass_proposals_hint=(Liste adskilt med komma eller lodret streg)
 
 # Generic
-### Missing: polls.author=
-### Missing: polls.date=
-### Missing: polls.nofiles=
-### Missing: polls.addfiles=
-### Missing: polls.seeallfiles=
+polls.author=af {0}
+polls.date=den {0}
+polls.nofiles=Der er ingen afstemninger endnu
+polls.addfiles=Tilføj afstemning
+polls.seeallfiles=Se alle afstemninger
 
 # Recent polls macro
-### Missing: polls.recentpolls.title=
-### Missing: rendering.macro.pollsrecent.name=
-### Missing: rendering.macro.pollsrecent.description=
-### Missing: rendering.macro.pollsrecent.parameter.limit.name=
-### Missing: rendering.macro.pollsrecent.parameter.limit.description=
+polls.recentpolls.title=Seneste afstemninger
+rendering.macro.pollsrecent.name=Seneste afstemninger
+rendering.macro.pollsrecent.description=Viser de N seneste afstemninger.
+rendering.macro.pollsrecent.parameter.limit.name=Grænse
+rendering.macro.pollsrecent.parameter.limit.description=Største antal poster.
 
 # Template Provider
-### Missing: templateProvider.xpoll.name=
-### Missing: templateProvider.xpoll.description=
+templateProvider.xpoll.name=Afstemning
+templateProvider.xpoll.description=Analyser stemmer
 </content>
 </xwikidoc>
